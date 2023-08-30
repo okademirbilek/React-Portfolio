@@ -1,0 +1,22 @@
+//import order is matter because if we import variables first we can use that
+//variables inside base scss file
+
+//variables & functions
+@forward "functions";
+@forward "variables";
+
+//base & layout & media
+@forward "base";
+@forward "breakpoints";
+@forward "grid";
+//colors
+@forward "colors";
+
+//components (button , card , navbar )
+@forward "components/card";
+@forward "components/button";
+@forward "components/navbar";
+@forward "components/main";
+
+// utilities (margin, padding , opacity)
+@forward "utilities";

@@ -1,0 +1,28 @@
+@use "variables" as *;
+
+.main {
+  flex-direction: column;
+  h2 {
+    font-size: $font-size-xxl;
+    strong {
+      color: $secondary;
+    }
+  }
+  p {
+    max-width: 500px;
+    font-size: $font-size-lg;
+  }
+}
+
+.image-main {
+  background-image: url("3409297.jpg");
+  //   background-image: url("https://images8.alphacoders.com/124/1240288.jpg");
+  //   background-image: url("../../../public/satoru2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  //   filter: grayscale(30%);
+}
+.size {
+  height: 100vh;
+}
