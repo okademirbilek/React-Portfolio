@@ -8,6 +8,7 @@
 body {
   font-family: Poppins;
   color: whitesmoke;
+  overflow-x: hidden;
 }
 
 ul {
@@ -73,6 +74,7 @@ img {
 }
 .row a {
   font-size: 1.2rem;
+  z-index: 1;
 }
 .row a:hover {
   color: #fc5241;
@@ -779,10 +781,22 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  z-index: -1;
 }
 
 .size {
   height: 100vh;
+}
+
+.part-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
 }
 
 .p-0 {

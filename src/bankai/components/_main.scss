@@ -16,13 +16,38 @@
 
 .image-main {
   background-image: url("3409297.jpg");
-  //   background-image: url("https://images8.alphacoders.com/124/1240288.jpg");
-  //   background-image: url("../../../public/satoru2.jpg");
+  // background-image: url("https://images8.alphacoders.com/124/1240288.jpg");
+  // background-image: url("../../../public/satoru2.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  z-index: -1;
+
   //   filter: grayscale(30%);
 }
 .size {
   height: 100vh;
+}
+
+// #background-video {
+//   width: 100vw;
+//   height: 100vh;
+//   object-fit: cover;
+//   position: fixed;
+//   left: 0;
+//   right: 0;
+//   top: 0;
+//   bottom: 0;
+//   z-index: -1;
+// }
+
+.part-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
 }

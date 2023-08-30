@@ -1,11 +1,17 @@
 import React from "react";
 import "../css/index.css";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
     <>
       <div className="container">
-        <div className="main display-f vh-90">
+        <motion.div
+          className="main display-f vh-90"
+          initial={{ x: "100vw" }}
+          animate={{ x: 0 }}
+          transition={{ type: "spring", stiffness: 150 }}
+        >
           <h2 className="mt-15">
             <strong>Front End</strong> Developer
           </h2>
@@ -14,7 +20,7 @@ export default function Home() {
             quis blanditiis minus asperiores earum dolorum enim recusandae unde,
             commodi possimus.
           </p>
-        </div>
+        </motion.div>
       </div>
     </>
   );
