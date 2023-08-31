@@ -52,6 +52,12 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
     justify-content: $val;
   }
 }
+//align items classes
+@each $val in $layout-values {
+  .align-#{$val} {
+    align-items: $val;
+  }
+}
 
 @mixin layout1($i, $grid-colums) {
   box-sizing: border-box;

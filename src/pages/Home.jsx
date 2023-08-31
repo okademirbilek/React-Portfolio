@@ -2,23 +2,42 @@ import React from "react";
 import "../css/index.css";
 import { motion } from "framer-motion";
 
+const variantTitle = {
+  hidden: {
+    x: "100vw",
+  },
+  visible: {
+    x: 0,
+    transition: {
+      delay: 0.2,
+      type: "spring",
+      stiffness: 150,
+    },
+  },
+  exit: {
+    x: "-100vw",
+    transition: { ease: "easeInOut" },
+  },
+};
+
 export default function Home() {
   return (
     <>
-      <div className="container">
+      <div className="container  display-f mt-5  br-lg">
         <motion.div
-          className="main display-f vh-90"
-          initial={{ x: "100vw" }}
-          animate={{ x: 0 }}
-          transition={{ type: "spring", stiffness: 150 }}
+          className="main display-f br-lg p-2 "
+          variants={variantTitle}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
         >
-          <h2 className="mt-15">
-            <strong>Front End</strong> Developer
+          <h2>
+            <strong>Front end </strong> Developer
           </h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum
-            quis blanditiis minus asperiores earum dolorum enim recusandae unde,
-            commodi possimus.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat
+            rem iure aut rerum id quis suscipit quo eum dolor laboriosam debitis
+            consectetur, similique corrupti.
           </p>
         </motion.div>
       </div>
