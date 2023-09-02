@@ -23,9 +23,9 @@ const variantTitle = {
 export default function Home() {
   return (
     <>
-      <div className="container  display-f mt-5  br-lg">
+      <div className="container  display-f mt-5 br-lg">
         <motion.div
-          className="main display-f br-lg p-2 "
+          className="main display-f br-lg p-2  "
           variants={variantTitle}
           initial="hidden"
           animate="visible"

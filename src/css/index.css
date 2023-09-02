@@ -525,6 +525,10 @@ img {
 .card .card-body a {
   text-decoration: underline;
 }
+.card img {
+  width: 350px;
+  height: 300px;
+}
 
 .btn {
   text-decoration: none;
@@ -885,8 +889,81 @@ img {
   height: 90%;
 }
 .skills .s-logo {
-  width: 140px;
+  width: 130px;
+  height: 130px;
   object-fit: contain;
+}
+.skills .gaps {
+  gap: 20px;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.slide-in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  transform-origin: bottom;
+}
+
+.slide-out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  transform-origin: top;
+}
+
+.loader {
+  width: 10px;
+  height: 10px;
+  margin: 40px auto;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.contact .form button, .contact .form input {
+  background: rgba(35, 60, 122, 0.1);
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 6px;
+}
+
+.contact .form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 50%;
+}
+.contact .form input {
+  height: 50px;
+  padding: 0.3rem;
+  color: white;
+  font-weight: 400;
+}
+.contact .form input:focus {
+  outline: none;
+}
+.contact .form button {
+  border: none;
+  height: 50px;
+  color: white;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  max-width: 300px;
+  min-width: 150px;
+}
+.contact .form button:hover {
+  background-color: #53ddff;
+}
+.contact .form button:disabled {
+  background-color: #aaaaaa;
+  cursor: not-allowed;
 }
 
 .p-0 {
@@ -1419,4 +1496,44 @@ img {
 
 .cursor-d {
   cursor: default;
+}
+
+.gp-1 {
+  gap: 1rem;
+}
+
+.gp-2 {
+  gap: 2rem;
+}
+
+.gp-3 {
+  gap: 3rem;
+}
+
+.gp-4 {
+  gap: 4rem;
+}
+
+.gp-5 {
+  gap: 5rem;
+}
+
+.gp-6 {
+  gap: 6rem;
+}
+
+.gp-7 {
+  gap: 7rem;
+}
+
+.gp-8 {
+  gap: 8rem;
+}
+
+.gp-9 {
+  gap: 9rem;
+}
+
+.gp-10 {
+  gap: 10rem;
 }

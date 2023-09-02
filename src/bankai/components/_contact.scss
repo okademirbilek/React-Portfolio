@@ -1,0 +1,47 @@
+@use "variables" as *;
+
+%back {
+  background: rgba(35, 60, 122, 0.1);
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 6px;
+}
+
+.contact {
+  .form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 50%;
+    input {
+      @extend %back;
+      height: 50px;
+      padding: 0.3rem;
+      color: white;
+      font-weight: 400;
+      &:focus {
+        outline: none;
+      }
+    }
+
+    button {
+      @extend %back;
+      border: none;
+
+      height: 50px;
+      color: white;
+      font-family: "Inter", sans-serif;
+      cursor: pointer;
+      max-width: 300px;
+      min-width: 150px;
+      &:hover {
+        background-color: #53ddff;
+      }
+      &:disabled {
+        background-color: #aaaaaa;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
