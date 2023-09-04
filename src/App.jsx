@@ -67,7 +67,7 @@ function App() {
 
   return (
     //Animate presence for routing animations exit
-    // <ImageProvider preloadImages={data}>
+
     <div className="backColor  vh-100">
       {location.key === "default" && !location.pathname === "/" ? null : (
         <Header />

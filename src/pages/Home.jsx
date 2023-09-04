@@ -51,7 +51,7 @@ export default function Home() {
       ></motion.img>
       <div className="container  display-f  br-lg">
         <motion.div
-          className="main display-f br-lg p-2  mt-15 "
+          className="main display-f br-lg p-2  mt-10 "
           variants={variantTitle}
           initial="hidden"
           animate="visible"
