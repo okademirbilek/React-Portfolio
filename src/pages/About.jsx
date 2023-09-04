@@ -28,10 +28,13 @@ const variantImage = {
   visible: {
     opacity: 1,
     transition: {
+      ease: "easeIn",
       delay: 0.3,
-      duration: 1,
-      ease: "easeInOut",
     },
+  },
+  exit: {
+    opacity: 0,
+    transition: { ease: "easeInOut" },
   },
 };
 
@@ -63,6 +66,7 @@ export default function About() {
           variants={variantImage}
           initial="hidden"
           animate="visible"
+          exit="exit"
         />
       </div>
     </>

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 import Loader from "../components/Loader";
-import { AnimatePresence } from "framer-motion";
 
 import "../../serviceWorker";
 
@@ -40,6 +39,7 @@ const variantText = {
   },
   visible: {
     opacity: 1,
+    delay: 0.3,
     transition: {
       duration: 1,
     },

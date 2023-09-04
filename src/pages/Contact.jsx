@@ -2,6 +2,25 @@ import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { enqueueSnackbar } from "notistack";
 
+import { motion } from "framer-motion";
+
+const variantCon = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      ease: "easeIn",
+      delay: 0.3,
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: { ease: "easeInOut" },
+  },
+};
+
 export default function Contact() {
   const [status, setStatus] = useState("idle");
   const [error, setError] = useState(null);
@@ -45,7 +64,13 @@ export default function Contact() {
   };
 
   return (
-    <div className="contact container  mt-5 pt-1 pb-1 ">
+    <motion.div
+      className="contact container  mt-5 pt-1 pb-1 "
+      variants={variantCon}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
       <div className="row  fd-c align-center">
         <h1>Let's Talk.</h1>
         <form
@@ -79,7 +104,6 @@ export default function Contact() {
             type="text"
             placeholder="Subject"
             minLength={6}
-            required
           />
           <textarea
             className="col-12-xs col-12-xl col-12-md vw-full"
@@ -100,6 +124,6 @@ export default function Contact() {
           </button>
         </form>
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
+const variantCon = {
+  exit: {
+    opacity: 0,
+    transition: { ease: "easeInOut" },
+  },
+};
+
 export default function ProjectCard({ src, title }) {
   const [imageLoading, setImageLoading] = useState(true);
   const [pulsing, setPulsing] = useState(true);
@@ -24,6 +31,7 @@ export default function ProjectCard({ src, title }) {
           setIsShown(false);
         }}
         className="hover-effect cursor-p "
+        variants={variantCon}
         initial={{ opacity: 0, scaleY: 0 }}
         animate={{
           scaleY: isShown ? 1 : 0,
@@ -31,6 +39,8 @@ export default function ProjectCard({ src, title }) {
           zIndex: isShown ? 1 : -1,
         }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
+        // exit={{ opacity: 0, transition: { ease: "easeOut" } }}
+        exit="exit"
       >
         <h2 className="">Project Page </h2>
       </motion.div>
@@ -53,6 +63,7 @@ export default function ProjectCard({ src, title }) {
           { opacity: { delay: 0.5, duration: 1 } })
         }
         onLoad={imageLoaded}
+        exit={{ opacity: 0, transition: { ease: "easeOut" } }}
       ></motion.img>
       {/* <p className="card-title">{title}</p> */}
     </div>

@@ -1,49 +1,60 @@
 @use "sass:math";
-@use "../variables" as *;
+@use "variables" as *;
+@use "breakpoints" as *;
 
-.projects {
-  width: 60%;
-  gap: 1.5rem;
-  .card {
-    position: relative;
-    .card-title {
-      font-size: $font-size-lg;
-      padding-bottom: $base-padding;
-      font-weight: bold;
-    }
-
-    .card-body {
-      font-size: $base-font-size;
-
-      a {
-        text-decoration: underline;
+.project-container {
+  flex-direction: column;
+  .projects {
+    width: 60%;
+    gap: 1.5rem;
+    .card {
+      position: relative;
+      .card-title {
+        font-size: $font-size-lg;
+        padding-bottom: $base-padding;
+        font-weight: bold;
       }
-    }
 
-    img {
-      width: 220px;
-      height: 200px;
-    }
+      .card-body {
+        font-size: $base-font-size;
 
-    .hover-effect {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-      width: 220px;
-      height: 200px;
-      background: #06954f;
-      background: -webkit-linear-gradient(0deg, #06954f 0%, #1ac888 100%);
-      background: linear-gradient(0deg, #06954f 0%, #1ac888 100%);
-      position: absolute;
-      top: 0;
-      left: 0px;
-      bottom: 0;
-      right: 0;
-      transform-origin: top;
+        a {
+          text-decoration: underline;
+        }
+      }
+
+      img {
+        width: 220px;
+        height: 200px;
+      }
+
+      .hover-effect {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        width: 220px;
+        height: 200px;
+        background: #06954f;
+        background: -webkit-linear-gradient(0deg, #06954f 0%, #1ac888 100%);
+        background: linear-gradient(0deg, #06954f 0%, #1ac888 100%);
+        position: absolute;
+        top: 0;
+        left: 0px;
+        bottom: 0;
+        right: 0;
+        transform-origin: top;
+      }
     }
   }
 }
+
+@include md {
+  .project-container {
+    flex-direction: row;
+  }
+}
+
 .pulse {
   animation: pulse 1.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }

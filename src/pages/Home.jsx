@@ -48,7 +48,7 @@ export default function Home() {
         animate="visible"
         exit="exit"
         src={mainImg}
-      />
+      ></motion.img>
       <div className="container  display-f  br-lg">
         <motion.div
           className="main display-f br-lg p-2  mt-15 "

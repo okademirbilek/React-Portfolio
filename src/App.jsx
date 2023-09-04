@@ -82,10 +82,9 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <SnackbarProvider autoHideDuration={1000} />
       </AnimatePresence>
+      <SnackbarProvider autoHideDuration={1500} />
     </div>
-    // </ImageProvider>
   );
 }
 

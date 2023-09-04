@@ -1,6 +1,9 @@
 @use "variables" as *;
+@use "breakpoints" as *;
+@use "sass:math";
 
 .home {
+  position: relative;
   .main {
     flex-direction: column;
     justify-content: center;
@@ -23,6 +26,17 @@
 
   .mainImg {
     position: fixed;
+    bottom: 0;
+
+    // max-width: 1920px;
+    // max-height: 1229px;
+  }
+
+  @include xl {
+    .mainImg {
+      position: fixed;
+      top: 0;
+    }
   }
 }
 

@@ -528,29 +528,32 @@ img {
   background-color: #fff;
 }
 
-.projects {
+.project-container {
+  flex-direction: column;
+}
+.project-container .projects {
   width: 60%;
   gap: 1.5rem;
 }
-.projects .card {
+.project-container .projects .card {
   position: relative;
 }
-.projects .card .card-title {
+.project-container .projects .card .card-title {
   font-size: 1.5rem;
   padding-bottom: 0.75rem;
   font-weight: bold;
 }
-.projects .card .card-body {
+.project-container .projects .card .card-body {
   font-size: 1rem;
 }
-.projects .card .card-body a {
+.project-container .projects .card .card-body a {
   text-decoration: underline;
 }
-.projects .card img {
+.project-container .projects .card img {
   width: 220px;
   height: 200px;
 }
-.projects .card .hover-effect {
+.project-container .projects .card .hover-effect {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -568,6 +571,11 @@ img {
   transform-origin: top;
 }
 
+@media (min-width: 720px) {
+  .project-container {
+    flex-direction: row;
+  }
+}
 .pulse {
   animation: pulse 1.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
@@ -1011,6 +1019,9 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
     display: flex;
   }
 }
+.home {
+  position: relative;
+}
 .home .main {
   flex-direction: column;
   justify-content: center;
@@ -1031,6 +1042,13 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
 }
 .home .mainImg {
   position: fixed;
+  bottom: 0;
+}
+@media (min-width: 1200px) {
+  .home .mainImg {
+    position: fixed;
+    top: 0;
+  }
 }
 
 .backColor {
