@@ -11,9 +11,8 @@ import { AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import Header from "./components/Header";
 import ParticlesContainer from "./components/ParticlesContainer";
-import ImageProvider from "./context/ImageContext";
+import NotFound from "./pages/NotFound";
 
-import preloadImages from "./utils/utils";
 import "../serviceWorker";
 
 // import reactl from "./assets/react.svg";
@@ -70,7 +69,9 @@ function App() {
     //Animate presence for routing animations exit
     // <ImageProvider preloadImages={data}>
     <div className="image-main size" alt="Designed by starline / Freepik">
-      <Header />
+      {location.key === "default" && !location.pathname === "/" ? null : (
+        <Header />
+      )}
       {location.pathname === "/" && <ParticlesContainer />}
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
@@ -81,6 +82,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
           </Route>
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>
     </div>

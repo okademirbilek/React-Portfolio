@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 // import data from "../skillsData";
-import { useImage } from "../context/ImageContext";
-import Transition from "../components/Transition";
 import Loader from "../components/Loader";
 
 import "../../serviceWorker";
@@ -67,11 +65,7 @@ const data = [
 ];
 
 export default function Skills() {
-  // const preloadedImages = useImage();
   const [cachedImages, setCachedImages] = useState([]);
-  // console.log("imagesArray", cachedImages);
-  // console.log(getCachedImage);
-  const [shouldRender, setShouldRender] = useState(false);
 
   //fetchhh
   useEffect(() => {
@@ -108,15 +102,10 @@ export default function Skills() {
     fetchCachedImages();
   }, []);
 
-  // const handleImageLoad = (url) => {
-  //   console.log(url);
-  // };
-
   const skillsElement = cachedImages.map((item, index) => {
     return (
       <div
         key={index}
-        // className="col-xs-12 col-2-md col-3-lg display-f justify-center fd-c align-center "
         className="container display-f justify-center col-xs-12 col-2-md col-3-lg gap-0 gaps  "
       >
         <div className="row display-f justify-space-around align-center fd-c">
@@ -129,7 +118,6 @@ export default function Skills() {
             exit="exit"
             whileHover="hover"
             loading="eager"
-            // onLoad={() => handleImageLoad(item.url)}
           ></motion.img>
           <motion.h2
             variants={variantText}
@@ -144,15 +132,7 @@ export default function Skills() {
     );
   });
   return (
-    <motion.div
-      className="container mt-2 mb-2 vh-90"
-      // initial={{ scaleY: 0 }}
-      // animate={{ scaleY: 1 }}
-      // transition={{ duration: 1 }}
-      // onAnimationComplete={() => setShouldRender(true)}
-    >
-      {/* <h1 className="display-f justify-center mb-1">Skills</h1> */}
-
+    <motion.div className="container mt-2 mb-2 vh-90">
       <div className="row skills display-f justify-center gaps">
         {cachedImages.length > 0 ? (
           skillsElement

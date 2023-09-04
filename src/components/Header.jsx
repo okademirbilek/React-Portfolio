@@ -37,7 +37,7 @@ export default function Header() {
     textDecoration: "underline",
     // color: "#DDA56A",
     color: "#fc5241",
-    scale: "1.2",
+    scale: "1.3",
   };
   return (
     <nav className="navbar">

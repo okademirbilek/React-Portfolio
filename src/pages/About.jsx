@@ -1,7 +1,7 @@
 import React from "react";
 
 import { motion } from "framer-motion";
-import myImage from "../assets/myimage.jpeg";
+import myImage from "../assets/person.svg";
 
 const variantTitle = {
   hidden: {
@@ -18,6 +18,20 @@ const variantTitle = {
   exit: {
     x: "-100vw",
     transition: { ease: "easeInOut" },
+  },
+};
+
+const variantImage = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: 0.3,
+      duration: 1,
+      ease: "easeInOut",
+    },
   },
 };
 
@@ -42,7 +56,15 @@ export default function About() {
             provident nisi facilis aperiam. Omnis, eius maxime mollitia facilis
           </p>
         </motion.div>
-        <img src={myImage} alt="author image" className="br-lg" />
+        <motion.img
+          title="https://storyset.com/data"
+          src={myImage}
+          alt="author image"
+          // className="br-full"
+          variants={variantImage}
+          initial="hidden"
+          animate="visible"
+        />
       </div>
     </>
   );
