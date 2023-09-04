@@ -5,11 +5,16 @@
   gap: 5rem;
   margin-top: 2%;
   flex-flow: row wrap;
+
   .about {
     flex-direction: column;
     justify-content: center;
     flex-direction: column;
     justify-content: center;
+    background: rgba(35, 60, 122, 0.1);
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
 
     overflow: hidden;
     h2 {
@@ -19,7 +24,7 @@
       }
     }
     p {
-      max-width: 500px;
+      max-width: 400px;
       font-size: $font-size-md;
     }
   }

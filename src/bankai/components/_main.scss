@@ -1,46 +1,35 @@
 @use "variables" as *;
 
-.main {
-  flex-direction: column;
-  justify-content: center;
-  background: rgba(35, 60, 122, 0.1);
-  -webkit-backdrop-filter: blur(1px);
-  backdrop-filter: blur(1px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  overflow: hidden;
-  h2 {
-    font-size: $font-size-xl;
-    strong {
-      color: $secondary;
+.home {
+  .main {
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(35, 60, 122, 0.1);
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    h2 {
+      font-size: $font-size-xl;
+      strong {
+        color: $secondary;
+      }
+    }
+
+    p {
+      max-width: 500px;
+      font-size: $font-size-md;
     }
   }
 
-  p {
-    max-width: 500px;
-    font-size: $font-size-md;
+  .mainImg {
+    position: fixed;
   }
 }
-.section {
-  overflow: hidden;
-  background-image: url("/public/Removal-565.png");
 
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-transition: background-image 0.2s ease-in-out;
-  transition: background-image 0.2s ease-in-out;
-}
-
-.image-main {
+.backColor {
   background-color: $backColor;
-
-  overflow: hidden;
-}
-.size {
-  height: 100vh;
-}
-
-.avatar {
-  z-index: -1;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .part-container {

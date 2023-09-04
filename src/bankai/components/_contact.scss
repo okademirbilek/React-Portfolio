@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "breakpoints" as *;
 
 %back {
   background: rgba(35, 60, 122, 0.1);
@@ -6,20 +7,75 @@
   backdrop-filter: blur(1px);
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 6px;
+  font-size: $font-size-md;
+  padding: 0.3rem;
+  color: whitesmoke;
+  font-weight: 400;
+  min-width: 300px;
+  max-width: 700px;
 }
 
 .contact {
+  .row {
+    height: 100%;
+    h1 {
+      color: $secondary;
+      font-size: $font-size-xxl;
+    }
+  }
   .form {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    width: 50%;
+    width: 95%;
+    .name {
+      flex-wrap: wrap;
+    }
+
+    @include md {
+      .name {
+        flex-wrap: nowrap;
+        justify-content: center;
+        max-width: 700px;
+        input {
+          width: 50%;
+        }
+      }
+    }
+
+    textarea {
+      @extend %back;
+      resize: none;
+      height: 200px;
+
+      outline: none;
+
+      font-family: poppins;
+    }
+
+    .alert {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background-color: #ea564b; /* Red */
+
+      margin-bottom: 0;
+      width: 100%;
+      max-width: 700px;
+      height: 90px;
+      border-radius: 5px;
+    }
+
+    .login-error {
+      font-weight: bold;
+      font-size: $font-size-lg;
+      line-height: 20px;
+      margin: 0;
+    }
+
     input {
       @extend %back;
-      height: 50px;
-      padding: 0.3rem;
-      color: white;
-      font-weight: 400;
+      height: 60px;
       &:focus {
         outline: none;
       }
@@ -36,7 +92,7 @@
       max-width: 300px;
       min-width: 150px;
       &:hover {
-        background-color: #53ddff;
+        background-color: $secondary;
       }
       &:disabled {
         background-color: #aaaaaa;

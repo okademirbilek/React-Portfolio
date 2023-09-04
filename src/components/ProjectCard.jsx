@@ -1,23 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-// const hoverVariant = {
-//   hidden: {
-//     opacity: 0,
-//     scaleY: 0,
-//   },
-//   visible: {
-//     scaleY: 1,
-//     opacity: 1,
-//     transition: { duration: 0.4, ease: "easeInOut" },
-//   },
-//   exit: {
-//     scaleY: 0,
-//     opacity: 0,
-//     transition: { duration: 0.1, ease: "easeInOut" },
-//   },
-// };
-
 export default function ProjectCard({ src, title }) {
   const [imageLoading, setImageLoading] = useState(true);
   const [pulsing, setPulsing] = useState(true);
@@ -33,10 +16,9 @@ export default function ProjectCard({ src, title }) {
       className={`card col-12-xs col-5-xl col-12-sm  display-f justify-center ${
         pulsing ? "pulse" : ""
       } loadable`}
-      style={{ width: "220px", background: "#ccc", borderRadius: "22px" }}
+      style={{ width: "220px", background: "#ccc", borderRadius: "6px" }}
     >
       <motion.div
-        // onMouseLeave={() => setIsShown(false)}
         onHoverStart={(e) => {}}
         onHoverEnd={(e) => {
           setIsShown(false);
@@ -58,7 +40,7 @@ export default function ProjectCard({ src, title }) {
           setIsShown(true);
         }}
         onHoverEnd={(e) => {}}
-        className="br "
+        // className="br "
         src={src}
         initial={{ height: "0.1rem", opacity: 0 }}
         // style={{ height: imageLoading ? "6rem" : "auto" }}
@@ -72,7 +54,7 @@ export default function ProjectCard({ src, title }) {
         }
         onLoad={imageLoaded}
       ></motion.img>
-      <p className="card-title">{title}</p>
+      {/* <p className="card-title">{title}</p> */}
     </div>
   );
 }

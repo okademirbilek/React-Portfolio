@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-// import data from "../skillsData";
+
 import Loader from "../components/Loader";
+import { AnimatePresence } from "framer-motion";
 
 import "../../serviceWorker";
 
@@ -106,7 +107,7 @@ export default function Skills() {
     return (
       <div
         key={index}
-        className="container display-f justify-center col-xs-12 col-2-md col-3-lg gap-0 gaps  "
+        className="container display-f justify-center col-xs-12 col-2-md col-3-lg gaps "
       >
         <div className="row display-f justify-space-around align-center fd-c">
           <motion.img
@@ -132,8 +133,8 @@ export default function Skills() {
     );
   });
   return (
-    <motion.div className="container mt-2 mb-2 vh-90">
-      <div className="row skills display-f justify-center gaps">
+    <motion.div className="skills-container container mt-2">
+      <div className="row skills display-f justify-center gaps ">
         {cachedImages.length > 0 ? (
           skillsElement
         ) : (

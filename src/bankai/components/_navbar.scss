@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "breakpoints" as *;
 
 %flex-layout {
   width: 100%;
@@ -28,5 +29,21 @@
   .navbar-#{$key} {
     @extend .navbar;
     background-color: $val;
+  }
+}
+
+//header hamburger menu
+
+.responsive-navbar {
+  a {
+    display: none;
+  }
+}
+
+@include lg {
+  .responsive-navbar {
+    a {
+      display: flex;
+    }
   }
 }

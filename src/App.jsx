@@ -2,7 +2,6 @@ import react, { useEffect } from "react";
 import "./css/index.css";
 import Home from "./pages/Home";
 import { Routes, Route } from "react-router-dom";
-import Layout from "./pages/Layout";
 import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import About from "./pages/About";
@@ -12,6 +11,7 @@ import { useLocation } from "react-router-dom";
 import Header from "./components/Header";
 import ParticlesContainer from "./components/ParticlesContainer";
 import NotFound from "./pages/NotFound";
+import { SnackbarProvider } from "notistack";
 
 import "../serviceWorker";
 
@@ -68,22 +68,21 @@ function App() {
   return (
     //Animate presence for routing animations exit
     // <ImageProvider preloadImages={data}>
-    <div className="image-main size" alt="Designed by starline / Freepik">
+    <div className="backColor  vh-100">
       {location.key === "default" && !location.pathname === "/" ? null : (
         <Header />
       )}
       {location.pathname === "/" && <ParticlesContainer />}
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-          </Route>
+          <Route path="/" element={<Home />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <SnackbarProvider autoHideDuration={1000} />
       </AnimatePresence>
     </div>
     // </ImageProvider>

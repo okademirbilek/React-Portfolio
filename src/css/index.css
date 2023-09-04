@@ -5,10 +5,16 @@
   margin: 0;
 }
 
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Poppins;
   color: whitesmoke;
-  overflow-y: hidden;
+  position: relative;
 }
 
 ul {
@@ -533,7 +539,6 @@ img {
   font-size: 1.5rem;
   padding-bottom: 0.75rem;
   font-weight: bold;
-  color: #ffa600;
 }
 .projects .card .card-body {
   font-size: 1rem;
@@ -997,46 +1002,41 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
   background-color: #fff;
 }
 
-.main {
+.responsive-navbar a {
+  display: none;
+}
+
+@media (min-width: 960px) {
+  .responsive-navbar a {
+    display: flex;
+  }
+}
+.home .main {
   flex-direction: column;
   justify-content: center;
   background: rgba(35, 60, 122, 0.1);
   -webkit-backdrop-filter: blur(1px);
   backdrop-filter: blur(1px);
   border: 1px solid rgba(255, 255, 255, 0.25);
-  overflow: hidden;
 }
-.main h2 {
+.home .main h2 {
   font-size: 2rem;
 }
-.main h2 strong {
+.home .main h2 strong {
   color: #1ac888;
 }
-.main p {
+.home .main p {
   max-width: 500px;
   font-size: 1.2rem;
 }
-
-.section {
-  overflow: hidden;
-  background-image: url("/public/Removal-565.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-transition: background-image 0.2s ease-in-out;
-  transition: background-image 0.2s ease-in-out;
+.home .mainImg {
+  position: fixed;
 }
 
-.image-main {
+.backColor {
   background-color: #050f28;
-  overflow: hidden;
-}
-
-.size {
-  height: 100vh;
-}
-
-.avatar {
-  z-index: -1;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .part-container {
@@ -1086,6 +1086,10 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
   justify-content: center;
   flex-direction: column;
   justify-content: center;
+  background: rgba(35, 60, 122, 0.1);
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   overflow: hidden;
 }
 .about-container .about h2 {
@@ -1095,27 +1099,38 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
   color: #1ac888;
 }
 .about-container .about p {
-  max-width: 500px;
+  max-width: 400px;
   font-size: 1.2rem;
 }
 .about-container img {
   height: 60%;
 }
 
-.skills {
+.skills-container {
+  height: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+.skills-container .skills {
   width: 100%;
   height: 90%;
 }
-.skills .s-logo {
+.skills-container .skills .s-logo {
   width: 130px;
   height: 130px;
   object-fit: contain;
 }
-.skills .gaps {
-  gap: 20px;
+.skills-container .skills .gaps {
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
+@media (min-width: 720px) {
+  .skills-container {
+    overflow-y: hidden;
+  }
+}
 .loader {
   width: 10px;
   height: 10px;
@@ -1124,25 +1139,70 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
   background: #fff;
 }
 
-.contact .form button, .contact .form input {
+.contact .form button, .contact .form input, .contact .form textarea {
   background: rgba(35, 60, 122, 0.1);
   -webkit-backdrop-filter: blur(1px);
   backdrop-filter: blur(1px);
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 6px;
+  font-size: 1.2rem;
+  padding: 0.3rem;
+  color: whitesmoke;
+  font-weight: 400;
+  min-width: 300px;
+  max-width: 700px;
 }
 
+.contact .row {
+  height: 100%;
+}
+.contact .row h1 {
+  color: #1ac888;
+  font-size: 3rem;
+}
 .contact .form {
   display: flex;
   flex-direction: column;
+  width: 95%;
+}
+.contact .form .name {
   flex-wrap: wrap;
-  width: 50%;
+}
+@media (min-width: 720px) {
+  .contact .form .name {
+    flex-wrap: nowrap;
+    justify-content: center;
+    max-width: 700px;
+  }
+  .contact .form .name input {
+    width: 50%;
+  }
+}
+.contact .form textarea {
+  resize: none;
+  height: 200px;
+  outline: none;
+  font-family: poppins;
+}
+.contact .form .alert {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ea564b; /* Red */
+  margin-bottom: 0;
+  width: 100%;
+  max-width: 700px;
+  height: 90px;
+  border-radius: 5px;
+}
+.contact .form .login-error {
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 20px;
+  margin: 0;
 }
 .contact .form input {
-  height: 50px;
-  padding: 0.3rem;
-  color: white;
-  font-weight: 400;
+  height: 60px;
 }
 .contact .form input:focus {
   outline: none;
@@ -1157,7 +1217,7 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
   min-width: 150px;
 }
 .contact .form button:hover {
-  background-color: #53ddff;
+  background-color: #1ac888;
 }
 .contact .form button:disabled {
   background-color: #aaaaaa;
@@ -1640,6 +1700,46 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
   height: 100vh;
 }
 
+.vh-10p {
+  height: 10%;
+}
+
+.vh-20p {
+  height: 20%;
+}
+
+.vh-30p {
+  height: 30%;
+}
+
+.vh-40p {
+  height: 40%;
+}
+
+.vh-50p {
+  height: 50%;
+}
+
+.vh-60p {
+  height: 60%;
+}
+
+.vh-70p {
+  height: 70%;
+}
+
+.vh-80p {
+  height: 80%;
+}
+
+.vh-90p {
+  height: 90%;
+}
+
+.vh-full {
+  height: 100%;
+}
+
 .vw-10 {
   width: 10vw;
 }
@@ -1678,6 +1778,46 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
 
 .vw-100 {
   width: 100vw;
+}
+
+.vw-10p {
+  width: 10%;
+}
+
+.vw-20p {
+  width: 20%;
+}
+
+.vw-30p {
+  width: 30%;
+}
+
+.vw-40p {
+  width: 40%;
+}
+
+.vw-50p {
+  width: 50%;
+}
+
+.vw-60p {
+  width: 60%;
+}
+
+.vw-70p {
+  width: 70%;
+}
+
+.vw-80p {
+  width: 80%;
+}
+
+.vw-90p {
+  width: 90%;
+}
+
+.vw-full {
+  width: 100%;
 }
 
 .fd-r {

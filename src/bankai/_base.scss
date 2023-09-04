@@ -8,10 +8,16 @@
   margin: 0;
 }
 
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Poppins;
   color: whitesmoke;
-  overflow-y: hidden;
+  position: relative;
 }
 
 ul {

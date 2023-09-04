@@ -1,7 +1,7 @@
 import React from "react";
 
 import { motion } from "framer-motion";
-import myImage from "../assets/person.svg";
+import myImage from "../assets/removed.png";
 
 const variantTitle = {
   hidden: {
@@ -38,7 +38,7 @@ const variantImage = {
 export default function About() {
   return (
     <>
-      <div className="container about-container display-f  vh-80 br-lg">
+      <div className="container about-container display-f vh-80 br-lg">
         <motion.div
           className="about display-f br-lg p-2 "
           variants={variantTitle}
@@ -52,15 +52,14 @@ export default function About() {
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat
             rem iure aut rerum id quis suscipit quo eum dolor laboriosam debitis
-            consectetur, similique corrupti iste pariatur sit, neque quia,
-            provident nisi facilis aperiam. Omnis, eius maxime mollitia facilis
+            consectetur, similique corrupti iste pariatur sit.
           </p>
         </motion.div>
         <motion.img
           title="https://storyset.com/data"
           src={myImage}
           alt="author image"
-          // className="br-full"
+          className="br-full"
           variants={variantImage}
           initial="hidden"
           animate="visible"
