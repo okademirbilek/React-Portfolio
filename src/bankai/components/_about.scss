@@ -1,9 +1,11 @@
 @use "variables" as *;
+@use "breakpoints" as *;
+
 .about-container {
   justify-content: center;
   align-items: center;
   gap: 5rem;
-  margin-top: 2%;
+  // margin-top: 8%;
   flex-flow: row wrap;
 
   .about {
@@ -17,6 +19,7 @@
     border: 1px solid rgba(255, 255, 255, 0.25);
 
     overflow: hidden;
+
     h2 {
       font-size: $font-size-xl;
       strong {
@@ -24,12 +27,21 @@
       }
     }
     p {
-      max-width: 400px;
+      max-width: 430px;
       font-size: $font-size-md;
     }
   }
 
+  .xxx {
+    background-image: url("splash.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
   img {
-    height: 60%;
+    height: 40%;
+    max-width: 600px;
+    min-width: 300px;
+    margin-bottom: 1rem;
   }
 }

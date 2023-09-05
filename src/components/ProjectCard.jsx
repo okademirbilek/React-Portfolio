@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const variantCon = {
   exit: {
@@ -8,7 +9,7 @@ const variantCon = {
   },
 };
 
-export default function ProjectCard({ src, title }) {
+export default function ProjectCard({ src, title, index }) {
   const [imageLoading, setImageLoading] = useState(true);
   const [pulsing, setPulsing] = useState(true);
   const [isShown, setIsShown] = useState(false);
@@ -39,10 +40,11 @@ export default function ProjectCard({ src, title }) {
           zIndex: isShown ? 1 : -1,
         }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        // exit={{ opacity: 0, transition: { ease: "easeOut" } }}
         exit="exit"
       >
-        <h2 className="">Project Page </h2>
+        <Link to={`/projects/${index}`}>
+          <h2 className="">Project Page </h2>
+        </Link>
       </motion.div>
 
       <motion.img
@@ -50,10 +52,8 @@ export default function ProjectCard({ src, title }) {
           setIsShown(true);
         }}
         onHoverEnd={(e) => {}}
-        // className="br "
         src={src}
         initial={{ height: "0.1rem", opacity: 0 }}
-        // style={{ height: imageLoading ? "6rem" : "auto" }}
         animate={{
           height: imageLoading ? "0.1rem" : "200px",
           opacity: imageLoading ? 0 : 1,
@@ -65,6 +65,7 @@ export default function ProjectCard({ src, title }) {
         onLoad={imageLoaded}
         exit={{ opacity: 0, transition: { ease: "easeOut" } }}
       ></motion.img>
+
       {/* <p className="card-title">{title}</p> */}
     </div>
   );

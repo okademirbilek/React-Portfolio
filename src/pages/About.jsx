@@ -1,8 +1,10 @@
 import React from "react";
 
 import { motion } from "framer-motion";
+
 import myImage from "../assets/removed.png";
 
+import { BsLinkedin, BsGithub } from "react-icons/bs";
 const variantTitle = {
   hidden: {
     x: "100vw",
@@ -41,9 +43,9 @@ const variantImage = {
 export default function About() {
   return (
     <>
-      <div className="container about-container display-f vh-80 br-lg">
+      <div className="container about-container display-f justify-center   mt-10 br-lg">
         <motion.div
-          className="about display-f br-lg p-2 "
+          className="about display-f br-lg p-2 mb-5 "
           variants={variantTitle}
           initial="hidden"
           animate="visible"
@@ -58,16 +60,31 @@ export default function About() {
             consectetur, similique corrupti iste pariatur sit.
           </p>
         </motion.div>
-        <motion.img
-          title="https://storyset.com/data"
-          src={myImage}
-          alt="author image"
-          className="br-full"
-          variants={variantImage}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
-        />
+        <div className="xxx">
+          <motion.img
+            title="https://storyset.com/data"
+            src={myImage}
+            alt="author image"
+            className="br-full"
+            variants={variantImage}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+          />
+        </div>
+
+        <div className="display-f gp-1 mt-1 ml-1">
+          <a
+            href="https://www.linkedin.com/in/okan-demirbilek-55b314228/"
+            target="_blank"
+          >
+            <BsLinkedin size={30} />
+          </a>
+
+          <a href="https://github.com/okademirbilek" target="_blank">
+            <BsGithub size={30} />
+          </a>
+        </div>
       </div>
     </>
   );

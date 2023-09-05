@@ -1,4 +1,4 @@
-import react, { useEffect } from "react";
+import React, { useEffect } from "react";
 import "./css/index.css";
 import Home from "./pages/Home";
 import { Routes, Route } from "react-router-dom";
@@ -14,6 +14,7 @@ import NotFound from "./pages/NotFound";
 import { SnackbarProvider } from "notistack";
 
 import "../serviceWorker";
+import ProjectDetail from "./pages/ProjectDetail";
 
 // import reactl from "./assets/react.svg";
 // import vite from "./assets/vite.svg";
@@ -78,6 +79,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:id" element={<ProjectDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />

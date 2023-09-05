@@ -20,15 +20,10 @@ const variantImage = {
 };
 
 const variantTitle = {
-  hidden: {
-    opacity: 0,
-  },
+  hidden: { opacity: 1, scale: 0 },
   visible: {
     opacity: 1,
-    transition: {
-      ease: "easeIn",
-      delay: 0.3,
-    },
+    scale: 1,
   },
   exit: {
     opacity: 0,
@@ -69,21 +64,25 @@ export default function Projects() {
           src={
             "https://github.com/okademirbilek/lostarkimages/blob/main/movie.JPG?raw=true"
           }
+          index={1}
         />
         <ProjectCard
           src={
             "https://github.com/okademirbilek/lostarkimages/blob/main/movie.JPG?raw=true"
           }
+          index={2}
         />
         <ProjectCard
           src={
             "https://github.com/okademirbilek/lostarkimages/blob/main/threejsimg.PNG?raw=true"
           }
+          index={3}
         />
         <ProjectCard
           src={
             "https://github.com/okademirbilek/lostarkimages/blob/main/quizzica.JPG?raw=true"
           }
+          index={4}
         />
       </div>
     </div>

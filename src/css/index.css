@@ -1096,7 +1096,6 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
   justify-content: center;
   align-items: center;
   gap: 5rem;
-  margin-top: 2%;
   flex-flow: row wrap;
 }
 .about-container .about {
@@ -1117,11 +1116,19 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
   color: #1ac888;
 }
 .about-container .about p {
-  max-width: 400px;
+  max-width: 430px;
   font-size: 1.2rem;
 }
+.about-container .xxx {
+  background-image: url("splash.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .about-container img {
-  height: 60%;
+  height: 40%;
+  max-width: 600px;
+  min-width: 300px;
+  margin-bottom: 1rem;
 }
 
 .skills-container {
@@ -1177,6 +1184,9 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
 .contact .row h1 {
   color: #1ac888;
   font-size: 3rem;
+}
+.contact .row h1 strong {
+  color: whitesmoke;
 }
 .contact .form {
   display: flex;
@@ -1240,6 +1250,10 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
 .contact .form button:disabled {
   background-color: #aaaaaa;
   cursor: not-allowed;
+}
+
+.project-detail {
+  transform-origin: center;
 }
 
 .p-0 {

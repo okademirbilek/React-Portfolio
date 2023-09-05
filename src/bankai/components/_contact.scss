@@ -21,6 +21,9 @@
     h1 {
       color: $secondary;
       font-size: $font-size-xxl;
+      strong {
+        color: whitesmoke;
+      }
     }
   }
   .form {
