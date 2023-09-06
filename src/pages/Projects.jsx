@@ -62,7 +62,7 @@ export default function Projects() {
       <div className=" row justify-center align-center mt-4 projects ">
         <ProjectCard
           src={
-            "https://github.com/okademirbilek/lostarkimages/blob/main/movie.JPG?raw=true"
+            "https://github.com/okademirbilek/lostarkimages/blob/main/portfoimg/image14.JPG?raw=true"
           }
           index={1}
         />
@@ -74,7 +74,7 @@ export default function Projects() {
         />
         <ProjectCard
           src={
-            "https://github.com/okademirbilek/lostarkimages/blob/main/threejsimg.PNG?raw=true"
+            "https://github.com/okademirbilek/lostarkimages/blob/main/portfoimg/image15.JPG?raw=true"
           }
           index={3}
         />

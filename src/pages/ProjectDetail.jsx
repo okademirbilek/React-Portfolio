@@ -6,6 +6,13 @@ import projectData from "../projects";
 
 import LazyIcon from "../components/LazyIcon";
 
+import { GiReturnArrow } from "react-icons/gi";
+import { FaGithub } from "react-icons/fa";
+import { BiLogoNetlify } from "react-icons/bi";
+import { RxVercelLogo } from "react-icons/rx";
+
+// import folderStrucImg from "../assets/project/reactport1.webp";
+
 const variantCon = {
   hidden: {
     scaleY: 0,
@@ -29,53 +36,101 @@ const variantCon = {
 export default function ProjectDetail() {
   const params = useParams();
   const data = projectData.filter((item) => item.id === params.id)[0];
-  const [Icon, setIcon] = useState([]);
+  const [IconsArray, setIconsArray] = useState([]);
+  // const [layImg, setLayImg] = useState(null);
 
+  //importing logos with lazyIcon component which i created, it loads logos with react lazy
   useEffect(() => {
     const iconElements = data.logos.map((item, index) => {
       return <LazyIcon iconName={item} key={index} />;
     });
-    setIcon(iconElements);
+    setIconsArray(iconElements);
   }, []);
+
+  //import folderStucture image
+  //   https://vitejs.dev/guide/assets.html#static-asset-handling
+  // useEffect(() => {
+  //   setLayImg(new URL(data.layoutImg, import.meta.url).href);
+  // }, []);
 
   return (
     <>
-      <motion.div
-        className="container project-detail mt-3 bg-secondary vh-80 br-lg p-3"
+      <motion.section
+        className="container project-detail mt-3 back  br-lg p-3"
         variants={variantCon}
         initial="hidden"
         animate="visible"
         exit="exit"
       >
-        <Link to="/projects">Back to Projects</Link>
-        <h1>{data.title}</h1>
-        <div className="container bg-error vh-40">halo</div>
-        <p>{data.summary}</p>
-      </motion.div>
-      <div className="container bg-secondary vh-60 display-f fd-c align-center justify-center br-lg mt-1">
-        <div className="bg-backColor p-2 br-lg display-f gp-1 mt-2 row justify-center">
-          {Icon.map((item) => item)}
-        </div>
-        <div className=" row ">
-          <ul>
-            {data.library.map((item) => {
-              return <li>{item}</li>;
-            })}
-          </ul>
-        </div>
-      </div>
+        <Link className="bg-secondary p-1 br-sm" to="/projects">
+          Back to Projects <GiReturnArrow size={20} />
+        </Link>
 
-      <div className="container bg-secondary vh-60 display-f fd-c align-center  br-lg mt-1">
-        <p>{data.experience}</p>
-        <div className="container bg-error vh-40">halo</div>
-      </div>
+        <div className=" row mt-2 display-f  align-center gp-3">
+          <h1 className="">{data.title} </h1>
+          <a
+            className="site display-f justify-center gp-1  br-sm "
+            href={data.github}
+            target="_blank"
+          >
+            <FaGithub size={30} /> <h4>Github</h4>
+          </a>
+          <a
+            className="site display-f justify-center gp-1  br-sm "
+            href={data.website}
+            target="_blank"
+          >
+            {data.provider === "netlify" ? (
+              <BiLogoNetlify size={30} />
+            ) : (
+              <RxVercelLogo size={30} />
+            )}{" "}
+            <h4>Website</h4>
+          </a>
+        </div>
+
+        <div className="row display-f gp-1 mt-2">
+          <img
+            width={540}
+            className="bg-cardColor br-lg  mt-1"
+            src={data.images[0]}
+            loading="lazy"
+            alt={data.title}
+          />
+          <img
+            width={540}
+            className="bg-cardColor br-lg  mt-1"
+            src={data.images[1]}
+            loading="lazy"
+            alt={data.title}
+          />
+        </div>
+        <h2 className="mt-2">Project Summary</h2>
+        <p className="ml-1 mt-1 mb-2">{data.summary}</p>
+      </motion.section>
+
+      <section className="container back  display-f fd-c p-3  br-lg mt-4 mb-4">
+        <h2>Tech Stack</h2>
+        <div className="back p-2 br-lg display-f gp-1 mt-1 row justify-center">
+          {IconsArray.map((item) => item)}
+        </div>
+        <h2 className="mt-2">Experience</h2>
+        <p className="mt-1 ml-1">{data.experience}</p>
+      </section>
+
+      {/* <section className="container back  display-f fd-c align-center  br-lg mt-4 mb-4">
+        <img
+          width={1000}
+          className="bg-cardColor br-lg  mt-1 mb-1"
+          src={data.layoutImg}
+          loading="lazy"
+          alt="folder structure for project called react portfolio"
+        />
+      </section> */}
     </>
   );
 }
 
-// export default function ProjectDetail() {
-//   const params = useParams();
-//   const data = projectData.filter((item) => item.id === params.id)[0];
 //   const [Icon, setIcon] = useState([]);
 
 //   useEffect(() => {
@@ -115,21 +170,3 @@ export default function ProjectDetail() {
 
 //     loadIcons();
 //   }, []);
-
-//   return (
-//     <motion.div
-//       className="container project-detail mt-3 bg-secondary vh-80 br-lg p-3"
-//       variants={variantCon}
-//       initial="hidden"
-//       animate="visible"
-//       exit="exit"
-//     >
-//       <Link to="/projects">Back to Projects</Link>
-//       <h1>{data.title}</h1>
-//       <div>{data.summary}</div>
-//       <div className="bg-backColor p-2 br-lg display-f gp-1 mt-2 row justify-center">
-//         {Icon.map((item) => item)}
-//       </div>
-//     </motion.div>
-//   );
-// }

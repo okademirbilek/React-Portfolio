@@ -26,13 +26,6 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
 .row {
   display: flex;
   flex-flow: row wrap;
-  a {
-    font-size: $font-size-md;
-    z-index: 1;
-    &:hover {
-      color: $primary;
-    }
-  }
 }
 
 //grid gaps

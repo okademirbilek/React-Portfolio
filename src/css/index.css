@@ -78,13 +78,6 @@ img {
   display: flex;
   flex-flow: row wrap;
 }
-.row a {
-  font-size: 1.2rem;
-  z-index: 1;
-}
-.row a:hover {
-  color: #fc5241;
-}
 
 .gap-0 > * {
   padding: 0;
@@ -528,6 +521,14 @@ img {
   background-color: #fff;
 }
 
+.text-cardColor {
+  color: rgba(35, 60, 122, 0.1);
+}
+
+.bg-cardColor {
+  background-color: rgba(35, 60, 122, 0.1);
+}
+
 .project-container {
   flex-direction: column;
 }
@@ -537,6 +538,7 @@ img {
 }
 .project-container .projects .card {
   position: relative;
+  border: 1px solid #050f28;
 }
 .project-container .projects .card .card-title {
   font-size: 1.5rem;
@@ -966,7 +968,49 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
   background-color: white;
 }
 
-.navbar .container, .navbar-white .container, .navbar-backColor .container, .navbar-orange .container, .navbar-info .container, .navbar-error .container, .navbar-secondary .container, .navbar-primary .container, .navbar, .navbar-white, .navbar-backColor, .navbar-orange, .navbar-info, .navbar-error, .navbar-secondary, .navbar-primary {
+.btn-cardColor {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  background-color: rgba(35, 60, 122, 0.1);
+}
+.btn-cardColor:hover {
+  background-color: rgba(46, 79, 162, 0.1);
+}
+
+.btn-outlined-cardColor {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  background-color: #fff;
+  border: 1px solid rgba(35, 60, 122, 0.1);
+}
+.btn-outlined-cardColor:hover {
+  background-color: rgba(35, 60, 122, 0.1);
+}
+
+.btn-complement-cardColor {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  background-color: rgba(35, 60, 122, 0.1);
+  color: rgba(210, 179, 100, 0.1);
+}
+.btn-complement-cardColor:hover {
+  color: rgba(35, 60, 122, 0.1);
+  background-color: rgba(210, 179, 100, 0.1);
+}
+
+.navbar .container, .navbar-cardColor .container, .navbar-white .container, .navbar-backColor .container, .navbar-orange .container, .navbar-info .container, .navbar-error .container, .navbar-secondary .container, .navbar-primary .container, .navbar, .navbar-cardColor, .navbar-white, .navbar-backColor, .navbar-orange, .navbar-info, .navbar-error, .navbar-secondary, .navbar-primary {
   width: 100%;
   display: flex;
   align-items: center;
@@ -974,13 +1018,20 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
   box-sizing: border-box;
 }
 
-.navbar, .navbar-white, .navbar-backColor, .navbar-orange, .navbar-info, .navbar-error, .navbar-secondary, .navbar-primary {
+.navbar, .navbar-cardColor, .navbar-white, .navbar-backColor, .navbar-orange, .navbar-info, .navbar-error, .navbar-secondary, .navbar-primary {
   padding: 0.75rem 1.5rem;
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
   height: 10vh;
 }
-.navbar .site-title, .navbar-white .site-title, .navbar-backColor .site-title, .navbar-orange .site-title, .navbar-info .site-title, .navbar-error .site-title, .navbar-secondary .site-title, .navbar-primary .site-title {
+.navbar .site-title, .navbar-cardColor .site-title, .navbar-white .site-title, .navbar-backColor .site-title, .navbar-orange .site-title, .navbar-info .site-title, .navbar-error .site-title, .navbar-secondary .site-title, .navbar-primary .site-title {
   font-size: 2.25rem;
+}
+.navbar a, .navbar-cardColor a, .navbar-white a, .navbar-backColor a, .navbar-orange a, .navbar-info a, .navbar-error a, .navbar-secondary a, .navbar-primary a {
+  font-size: 1.2rem;
+  z-index: 1;
+}
+.navbar a:hover, .navbar-cardColor a:hover, .navbar-white a:hover, .navbar-backColor a:hover, .navbar-orange a:hover, .navbar-info a:hover, .navbar-error a:hover, .navbar-secondary a:hover, .navbar-primary a:hover {
+  color: #fc5241;
 }
 .navbar-primary {
   background-color: #fc5241;
@@ -1008,6 +1059,10 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
 
 .navbar-white {
   background-color: #fff;
+}
+
+.navbar-cardColor {
+  background-color: rgba(35, 60, 122, 0.1);
 }
 
 .responsive-navbar a {
@@ -1254,6 +1309,27 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
 
 .project-detail {
   transform-origin: center;
+}
+.project-detail h1 {
+  font-size: 2rem;
+}
+.project-detail a:hover {
+  color: #111111;
+  background-color: #f5f5f5;
+}
+.project-detail .site {
+  padding: 5px 15px;
+  background-color: #24292f;
+}
+.project-detail strong {
+  color: #1ac888;
+}
+
+.back {
+  background: rgba(35, 60, 122, 0.1);
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .p-0 {

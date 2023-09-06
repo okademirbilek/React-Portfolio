@@ -28,7 +28,7 @@ const LazyIcon = ({ iconName }) => {
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <IconComponent size={50} />
+      <IconComponent size={60} />
     </Suspense>
   );
 };

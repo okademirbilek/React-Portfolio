@@ -58,7 +58,7 @@ export default function Header() {
             animate="visible"
           ></motion.div>
         </div>
-        <div className="row gap-3 responsive-navbar">
+        <div className="header row gap-3 responsive-navbar">
           <NavLink
             to="/"
             style={({ isActive }) => (isActive ? activeStyle : null)}

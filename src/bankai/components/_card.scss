@@ -9,6 +9,7 @@
     gap: 1.5rem;
     .card {
       position: relative;
+      border: 1px solid $backColor;
       .card-title {
         font-size: $font-size-lg;
         padding-bottom: $base-padding;

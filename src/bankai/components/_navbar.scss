@@ -19,6 +19,14 @@
     font-size: $font-size-lg * 1.5;
   }
 
+  a {
+    font-size: $font-size-md;
+    z-index: 1;
+    &:hover {
+      color: $primary;
+    }
+  }
+
   .container {
     @extend %flex-layout;
   }
