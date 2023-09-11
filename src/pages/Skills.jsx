@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { useLocation } from "react-router-dom";
 
 import Loader from "../components/Loader";
 
@@ -68,23 +67,22 @@ const data = [
 
 export default function Skills() {
   const [cachedImages, setCachedImages] = useState([]);
-  const location = useLocation();
 
   //fetchhh
   useEffect(() => {
     async function fetchCachedImages() {
       const imageUrls = [
-        "https://okandemirbilek.netlify.app//src/assets/react.svg",
-        "https://okandemirbilek.netlify.app//src/assets/vite.svg",
-        "https://okandemirbilek.netlify.app//src/assets/sass.png",
-        "https://okandemirbilek.netlify.app//src/assets/js.png",
-        "https://okandemirbilek.netlify.app//src/assets/html.png",
-        "https://okandemirbilek.netlify.app//src/assets/css.png",
-        "https://okandemirbilek.netlify.app//src/assets/boot.png",
-        "https://okandemirbilek.netlify.app//src/assets/three.png",
-        "https://okandemirbilek.netlify.app//src/assets/api.png",
-        "https://okandemirbilek.netlify.app//src/assets/firebase.png",
-        "https://okandemirbilek.netlify.app//src/assets/blender.png",
+        "/src/assets/react.svg",
+        "/src/assets/vite.svg",
+        "/src/assets/sass.png",
+        "/src/assets/js.png",
+        "/src/assets/html.png",
+        "/src/assets/css.png",
+        "/src/assets/boot.png",
+        "/src/assets/three.png",
+        "/src/assets/api.png",
+        "/src/assets/firebase.png",
+        "/src/assets/blender.png",
       ];
 
       const cachedImagesArray = [];
