@@ -73,36 +73,19 @@ export default function Skills() {
   //fetchhh
   useEffect(() => {
     async function fetchCachedImages() {
-      let imageUrls = [];
-      if (location.pathname === "https://okandemirbilek.netlify.app") {
-        imageUrls = [
-          "https://okandemirbilek.netlify.app/src/assets/react.svg",
-          "https://okandemirbilek.netlify.app/src/assets/vite.svg",
-          "https://okandemirbilek.netlify.app/src/assets/sass.png",
-          "https://okandemirbilek.netlify.app/src/assets/js.png",
-          "https://okandemirbilek.netlify.app/src/assets/html.png",
-          "https://okandemirbilek.netlify.app/src/assets/css.png",
-          "https://okandemirbilek.netlify.app/src/assets/boot.png",
-          "https://okandemirbilek.netlify.app/src/assets/three.png",
-          "https://okandemirbilek.netlify.app/src/assets/api.png",
-          "https://okandemirbilek.netlify.app/src/assets/firebase.png",
-          "https://okandemirbilek.netlify.app/src/assets/blender.png",
-        ];
-      } else {
-        imageUrls = [
-          "/src/assets/react.svg",
-          "/src/assets/vite.svg",
-          "/src/assets/sass.png",
-          "/src/assets/js.png",
-          "/src/assets/html.png",
-          "/src/assets/css.png",
-          "/src/assets/boot.png",
-          "/src/assets/three.png",
-          "/src/assets/api.png",
-          "/src/assets/firebase.png",
-          "/src/assets/blender.png",
-        ];
-      }
+      const imageUrls = [
+        "https://okandemirbilek.netlify.app//src/assets/react.svg",
+        "https://okandemirbilek.netlify.app//src/assets/vite.svg",
+        "https://okandemirbilek.netlify.app//src/assets/sass.png",
+        "https://okandemirbilek.netlify.app//src/assets/js.png",
+        "https://okandemirbilek.netlify.app//src/assets/html.png",
+        "https://okandemirbilek.netlify.app//src/assets/css.png",
+        "https://okandemirbilek.netlify.app//src/assets/boot.png",
+        "https://okandemirbilek.netlify.app//src/assets/three.png",
+        "https://okandemirbilek.netlify.app//src/assets/api.png",
+        "https://okandemirbilek.netlify.app//src/assets/firebase.png",
+        "https://okandemirbilek.netlify.app//src/assets/blender.png",
+      ];
 
       const cachedImagesArray = [];
 
