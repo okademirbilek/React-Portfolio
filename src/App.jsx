@@ -50,7 +50,11 @@ function App() {
   useEffect(() => {
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker
-        .register("https://okandemirbilek.netlify.app/serviceWorker.js")
+        .register(
+          location.pathname === "https://okandemirbilek.netlify.app"
+            ? `https://okandemirbilek.netlify.app/serviceWorker.js`
+            : "../serviceWorker.js"
+        )
         .then((registration) => {
           console.log(
             "Service Worker registered with scope:",
