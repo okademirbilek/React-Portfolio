@@ -28,6 +28,7 @@
     "notistack": "^3.0.1",
     "react-icons": "^4.10.1",
     "react-router-dom": "^6.15.0",
+    "react-simple-typewriter": "^5.0.1",
     "react-tsparticles": "^2.12.2",
     "sass": "^1.66.1",
     "tsparticles": "^2.12.0",

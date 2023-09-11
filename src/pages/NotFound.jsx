@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import gif404 from "../assets/404.gif";
 
-export default function NotFound() {
+export default function NotFound({ setIs404Page }) {
+  useEffect(() => {
+    setIs404Page(true);
+  }, []);
   return (
     <div className="not-found display-f justify-center align-center vh-100 bg-white">
       <Link to="/">

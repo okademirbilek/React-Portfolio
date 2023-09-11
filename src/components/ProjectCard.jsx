@@ -9,7 +9,7 @@ const variantCon = {
   },
 };
 
-export default function ProjectCard({ src, title, index }) {
+export default function ProjectCard({ src, index }) {
   const [imageLoading, setImageLoading] = useState(true);
   const [pulsing, setPulsing] = useState(true);
   const [isShown, setIsShown] = useState(false);
@@ -65,8 +65,6 @@ export default function ProjectCard({ src, title, index }) {
         onLoad={imageLoaded}
         exit={{ opacity: 0, transition: { ease: "easeOut" } }}
       ></motion.img>
-
-      {/* <p className="card-title">{title}</p> */}
     </div>
   );
 }

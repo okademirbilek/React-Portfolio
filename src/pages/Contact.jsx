@@ -4,24 +4,6 @@ import { enqueueSnackbar } from "notistack";
 
 import { motion } from "framer-motion";
 
-// const variantCon = {
-//   // hidden: {
-//   //   opacity: 0,
-//   // },
-//   visible: {
-//     // opacity: 1,
-//     // transition: {
-//     //   ease: "easeIn",
-//     //   delay: 0.3,
-//     // },
-//     staggerChildren
-//   },
-//   // exit: {
-//   //   opacity: 0,
-//   //   transition: { ease: "easeInOut" },
-//   // },
-// };
-
 const container = {
   hidden: { opacity: 1, scale: 0 },
   visible: {

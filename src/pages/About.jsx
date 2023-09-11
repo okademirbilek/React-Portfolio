@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import myImage from "../assets/removed.png";
+import splash from "../assets/splash.svg";
 
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 const variantTitle = {
@@ -26,12 +27,15 @@ const variantTitle = {
 const variantImage = {
   hidden: {
     opacity: 0,
+    scale: 0,
   },
   visible: {
     opacity: 1,
+    scale: 1,
+
     transition: {
       ease: "easeIn",
-      delay: 0.3,
+      delay: 0.2,
     },
   },
   exit: {
@@ -43,29 +47,45 @@ const variantImage = {
 export default function About() {
   return (
     <>
-      <div className="container about-container display-f justify-center   mt-10 br-lg">
+      <div className="container about-container display-f justify-center   br-lg">
         <motion.div
-          className="about display-f br-lg p-2 mb-5 "
+          className="about display-f br-lg p-2 mb-3 "
           variants={variantTitle}
           initial="hidden"
           animate="visible"
           exit="exit"
         >
           <h2>
-            Hi! I'am <strong> Okan Demirbilek</strong>
+            Hi! I'm <strong> Okan Demirbilek</strong>
           </h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat
-            rem iure aut rerum id quis suscipit quo eum dolor laboriosam debitis
-            consectetur, similique corrupti iste pariatur sit.
+            I'm a front-end developer who is trying to learn and implement
+            modern web technologies such as React, Sass, Next.js,and TypeScript.
+            As a junior developer, I design and maintain optimized responsive
+            websites using my creativity, giving importance to performance as
+            well as visuality.
           </p>
         </motion.div>
-        <div className="xxx">
+        <div
+          className="splash-img-container"
+          // variants={variantSplash}
+          // initial="hidden"
+          // animate="visible"
+          // exit="exit"
+        >
+          {/* <motion.img
+            src={splash}
+            className="br-full splash"
+            variants={variantImage}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+          /> */}
           <motion.img
             title="https://storyset.com/data"
             src={myImage}
             alt="author image"
-            className="br-full"
+            className="br-full main-img"
             variants={variantImage}
             initial="hidden"
             animate="visible"
@@ -73,7 +93,13 @@ export default function About() {
           />
         </div>
 
-        <div className="display-f gp-1 mt-1 ml-1">
+        <motion.div
+          className="display-f gp-1 mt-1 ml-1"
+          variants={variantTitle}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+        >
           <a
             href="https://www.linkedin.com/in/okan-demirbilek-55b314228/"
             target="_blank"
@@ -84,7 +110,7 @@ export default function About() {
           <a href="https://github.com/okademirbilek" target="_blank">
             <BsGithub size={30} />
           </a>
-        </div>
+        </motion.div>
       </div>
     </>
   );

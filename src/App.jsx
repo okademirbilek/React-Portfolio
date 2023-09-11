@@ -31,6 +31,7 @@ import ProjectDetail from "./pages/ProjectDetail";
 function App() {
   //Get location information
   const location = useLocation();
+  const [is404Page, setIs404Page] = React.useState(false);
 
   // const data = [
   //   { skill: "React", imgSrc: reactl },
@@ -70,7 +71,8 @@ function App() {
     //Animate presence for routing animations exit
 
     <div className="backColor  vh-100">
-      {location.key === "default" && !location.pathname === "/" ? null : (
+      {!location.pathname === "/" ||
+      (is404Page && location.key === "default") ? null : (
         <Header />
       )}
       {location.pathname === "/" && <ParticlesContainer />}
@@ -82,7 +84,7 @@ function App() {
           <Route path="/projects/:id" element={<ProjectDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<NotFound setIs404Page={setIs404Page} />} />
         </Routes>
       </AnimatePresence>
       <SnackbarProvider autoHideDuration={1500} />

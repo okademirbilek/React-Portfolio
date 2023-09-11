@@ -5,15 +5,19 @@
 .home {
   position: relative;
   .main {
+    margin-top: 10em;
     flex-direction: column;
     justify-content: center;
     background: rgba(35, 60, 122, 0.1);
     -webkit-backdrop-filter: blur(1px);
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.25);
     h2 {
       font-size: $font-size-xl;
       strong {
+        color: $secondary;
+      }
+      span {
         color: $secondary;
       }
     }
@@ -27,9 +31,6 @@
   .mainImg {
     position: fixed;
     bottom: 0;
-
-    // max-width: 1920px;
-    // max-height: 1229px;
   }
 
   @include xl {

@@ -87,15 +87,16 @@
     button {
       @extend %back;
       border: none;
-
+      background-color: $secondary;
       height: 50px;
       color: white;
       font-family: "Inter", sans-serif;
       cursor: pointer;
       max-width: 300px;
       min-width: 150px;
+      font-size: $font-size-lg;
       &:hover {
-        background-color: $secondary;
+        background-color: #007047;
       }
       &:disabled {
         background-color: #aaaaaa;

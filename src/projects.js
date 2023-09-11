@@ -24,6 +24,7 @@ const projectData = [
       "notitack-snackbar",
       "react-tsparticles",
       "react-icons",
+      "react-simple-typewriter",
     ],
     summary:
       "It's a portfolio website to help people get to know me. It contains my tech skills, projects, and CV. You can also send me a message.Inside the project, I used some libraries such as Emailjs/browser, Notitack-Snackbar, ,react-tsparticles and React-Icons. If you are reading this, I put an Easter egg inside the website. If you find it, don't forget to leave me a message.",

@@ -3,6 +3,8 @@ import "../css/index.css";
 import { motion } from "framer-motion";
 import mainImg from "../assets/Removal-565.png";
 
+import { useTypewriter, Cursor } from "react-simple-typewriter";
+
 const variantTitle = {
   hidden: {
     x: "100vw",
@@ -39,6 +41,13 @@ const variantImage = {
 };
 
 export default function Home() {
+  const [text] = useTypewriter({
+    words: ["Front-End", "Web", "React"],
+    loop: {},
+    typeSpeed: 120,
+    deleteSpeed: 120,
+  });
+
   return (
     <div className="home">
       <motion.img
@@ -51,20 +60,23 @@ export default function Home() {
       ></motion.img>
       <div className="container  display-f  br-lg">
         <motion.div
-          className="main display-f br-lg p-2  mt-10 "
+          className="main display-f br-lg p-2"
           variants={variantTitle}
           initial="hidden"
           animate="visible"
           exit="exit"
         >
           <h2>
-            <strong>Front end </strong> Developer
+            <strong>{text}</strong>
+            {/* <span>
+              <Cursor cursorBlinking={false} />
+            </span> */}{" "}
+            Developer
           </h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
-            eveniet? Libero at natus repellendus assumenda molestias quos!
-            Architecto laudantium harum, itaque voluptas ipsum facilis atque
-            pariatur doloremque cupiditate autem.
+            Hi!, My name is Okan Demirbilek. I'm a front-end developer. I design
+            and develop modern web applications. Welcome to my portfolio
+            website.
           </p>
         </motion.div>
       </div>

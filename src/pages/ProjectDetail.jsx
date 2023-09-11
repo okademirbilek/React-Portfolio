@@ -11,7 +11,7 @@ import { FaGithub } from "react-icons/fa";
 import { BiLogoNetlify } from "react-icons/bi";
 import { RxVercelLogo } from "react-icons/rx";
 
-// import folderStrucImg from "../assets/project/reactport1.webp";
+import ImageLoad from "../components/ImageLoad";
 
 const variantCon = {
   hidden: {
@@ -22,8 +22,10 @@ const variantCon = {
     scaleY: 1,
     scaleX: 1,
     transition: {
-      ease: "easeIn",
-      delay: 0.3,
+      // ease: "easeIn",
+      // delay: 0.3,
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
     },
   },
   exit: {
@@ -33,11 +35,18 @@ const variantCon = {
   },
 };
 
+const item = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
+
 export default function ProjectDetail() {
   const params = useParams();
   const data = projectData.filter((item) => item.id === params.id)[0];
   const [IconsArray, setIconsArray] = useState([]);
-  // const [layImg, setLayImg] = useState(null);
 
   //importing logos with lazyIcon component which i created, it loads logos with react lazy
   useEffect(() => {
@@ -47,26 +56,24 @@ export default function ProjectDetail() {
     setIconsArray(iconElements);
   }, []);
 
-  //import folderStucture image
-  //   https://vitejs.dev/guide/assets.html#static-asset-handling
-  // useEffect(() => {
-  //   setLayImg(new URL(data.layoutImg, import.meta.url).href);
-  // }, []);
-
   return (
-    <>
-      <motion.section
-        className="container project-detail mt-3 back  br-lg p-3"
-        variants={variantCon}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
-      >
+    <motion.div
+      variants={variantCon}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
+      <motion.section className="container project-detail mt-3 back  br-lg p-3">
         <Link className="bg-secondary p-1 br-sm" to="/projects">
-          Back to Projects <GiReturnArrow size={20} />
+          <motion.span variants={item}>
+            Back to Projects <GiReturnArrow size={20} />
+          </motion.span>
         </Link>
 
-        <div className=" row mt-2 display-f  align-center gp-3">
+        <motion.div
+          className=" row mt-2 display-f  align-center gp-3"
+          variants={item}
+        >
           <h1 className="">{data.title} </h1>
           <a
             className="site display-f justify-center gp-1  br-sm "
@@ -87,47 +94,47 @@ export default function ProjectDetail() {
             )}{" "}
             <h4>Website</h4>
           </a>
-        </div>
+        </motion.div>
 
         <div className="row display-f gp-1 mt-2">
-          <img
+          {/* <ImageLoad src={data.images[0]} alt={data.title} size={540} />
+          <ImageLoad src={data.images[1]} alt={data.title} size={540} /> */}
+
+          <motion.img
             width={540}
             className="bg-cardColor br-lg  mt-1"
             src={data.images[0]}
-            loading="lazy"
             alt={data.title}
+            variants={item}
           />
-          <img
+          <motion.img
             width={540}
             className="bg-cardColor br-lg  mt-1"
             src={data.images[1]}
-            loading="lazy"
             alt={data.title}
+            variants={item}
           />
         </div>
-        <h2 className="mt-2">Project Summary</h2>
-        <p className="ml-1 mt-1 mb-2">{data.summary}</p>
+        <motion.h2 className="mt-2" variants={item}>
+          Project Summary
+        </motion.h2>
+        <motion.p className="ml-1 mt-1 mb-2" variants={item}>
+          {data.summary}
+        </motion.p>
       </motion.section>
 
-      <section className="container back  display-f fd-c p-3  br-lg mt-4 mb-4">
+      <motion.section
+        className="container back  display-f fd-c p-3  br-lg mt-4 mb-4"
+        variants={item}
+      >
         <h2>Tech Stack</h2>
         <div className="back p-2 br-lg display-f gp-1 mt-1 row justify-center">
           {IconsArray.map((item) => item)}
         </div>
         <h2 className="mt-2">Experience</h2>
         <p className="mt-1 ml-1">{data.experience}</p>
-      </section>
-
-      {/* <section className="container back  display-f fd-c align-center  br-lg mt-4 mb-4">
-        <img
-          width={1000}
-          className="bg-cardColor br-lg  mt-1 mb-1"
-          src={data.layoutImg}
-          loading="lazy"
-          alt="folder structure for project called react portfolio"
-        />
-      </section> */}
-    </>
+      </motion.section>
+    </motion.div>
   );
 }
 
