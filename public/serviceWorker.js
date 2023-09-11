@@ -23,10 +23,26 @@ self.addEventListener("install", (installEvent) => {
   );
 });
 
+// self.addEventListener("fetch", (fetchEvent) => {
+//   fetchEvent.respondWith(
+//     caches.match(fetchEvent.request).then((res) => {
+//       return res || fetch(fetchEvent.request);
+//     })
+//   );
+// });
+
 self.addEventListener("fetch", (fetchEvent) => {
   fetchEvent.respondWith(
     caches.match(fetchEvent.request).then((res) => {
-      return res || fetch(fetchEvent.request);
+      if (res) {
+        // Check the content type of the response
+        const contentType = res.headers.get("content-type");
+        console.log("Content-Type:", contentType);
+
+        return res;
+      } else {
+        return fetch(fetchEvent.request);
+      }
     })
   );
 });
