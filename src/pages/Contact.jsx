@@ -4,6 +4,8 @@ import { enqueueSnackbar } from "notistack";
 
 import { motion } from "framer-motion";
 
+const a = import.meta.env.VITE_COMMIT_REF;
+
 const container = {
   hidden: { opacity: 1, scale: 0 },
   visible: {
@@ -31,6 +33,8 @@ const item = {
 export default function Contact() {
   const [status, setStatus] = useState("idle");
   const [error, setError] = useState(null);
+
+  console.log(a);
 
   const form = useRef();
 
