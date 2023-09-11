@@ -33,13 +33,19 @@ self.addEventListener("install", (installEvent) => {
 
 self.addEventListener("fetch", (fetchEvent) => {
   fetchEvent.respondWith(
-    caches.match(fetchEvent.request).then((res) => {
-      if (res) {
-        // Check the content type of the response
-        const contentType = res.headers.get("content-type");
-        console.log("Content-Type:", contentType);
+    caches.match(fetchEvent.request).then((cachedResponse) => {
+      if (cachedResponse) {
+        // Clone the cached response and set the Content-Type header to "image"
+        const headers = new Headers(cachedResponse.headers);
+        headers.set("Content-Type", "image");
 
-        return res;
+        const imageResponse = new Response(cachedResponse.body, {
+          status: cachedResponse.status,
+          statusText: cachedResponse.statusText,
+          headers,
+        });
+
+        return imageResponse;
       } else {
         return fetch(fetchEvent.request);
       }
