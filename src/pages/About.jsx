@@ -6,6 +6,9 @@ import myImage from "../assets/removed.png";
 import splash from "../assets/splash.svg";
 
 import { BsLinkedin, BsGithub } from "react-icons/bs";
+
+import resume from "../assets/29agustCv.pdf";
+
 const variantTitle = {
   hidden: {
     x: "100vw",
@@ -35,12 +38,24 @@ const variantImage = {
 
     transition: {
       ease: "easeIn",
-      delay: 0.2,
+      // delay: 0.2,
+      duration: 0.5,
     },
   },
   exit: {
     opacity: 0,
     transition: { ease: "easeInOut" },
+  },
+};
+
+const variantLogo = {
+  hover: {
+    scale: 1.5,
+    transition: {
+      repeat: Infinity,
+      repeatType: "reverse",
+      duration: 0.3,
+    },
   },
 };
 
@@ -94,22 +109,39 @@ export default function About() {
         </div>
 
         <motion.div
-          className="display-f gp-1 mt-1 ml-1"
+          className="display-f gp-1 mt-1 ml-1 social"
           variants={variantTitle}
           initial="hidden"
           animate="visible"
           exit="exit"
         >
-          <a
+          <motion.a
+            variants={variantLogo}
+            whileHover="hover"
             href="https://www.linkedin.com/in/okan-demirbilek-55b314228/"
             target="_blank"
           >
             <BsLinkedin size={30} />
-          </a>
+          </motion.a>
 
-          <a href="https://github.com/okademirbilek" target="_blank">
+          <motion.a
+            variants={variantLogo}
+            whileHover="hover"
+            href="https://github.com/okademirbilek"
+            target="_blank"
+          >
             <BsGithub size={30} />
-          </a>
+          </motion.a>
+
+          <motion.a
+            variants={variantLogo}
+            whileHover="hover"
+            className="resume"
+            href={resume}
+            download="Resume"
+          >
+            Cv
+          </motion.a>
         </motion.div>
       </div>
     </>

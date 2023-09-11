@@ -5,6 +5,8 @@ import mainImg from "../assets/Removal-565.png";
 
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
+import ParticlesContainer from "../components/ParticlesContainer";
+
 const variantTitle = {
   hidden: {
     x: "100vw",
@@ -45,11 +47,15 @@ export default function Home() {
     words: ["Front-End", "Web", "React"],
     loop: {},
     typeSpeed: 120,
-    deleteSpeed: 120,
+    deleteSpeed: 80,
   });
 
   return (
     <div className="home">
+      <div className="particles-con">
+        <ParticlesContainer />
+      </div>
+
       <motion.img
         className="mainImg"
         variants={variantImage}

@@ -11,7 +11,7 @@ export default function ParticlesContainer() {
 
   return (
     <Particles
-      className="part-container width-100 height-100"
+      className="part-container "
       id="tsparticles"
       init={particlesInit}
       loaded={particlesLoaded}
@@ -74,7 +74,7 @@ export default function ParticlesContainer() {
               enable: true,
               area: 800,
             },
-            value: 80,
+            value: 90,
           },
           opacity: {
             value: 0.5,

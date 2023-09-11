@@ -75,7 +75,7 @@ function App() {
       (is404Page && location.key === "default") ? null : (
         <Header />
       )}
-      {location.pathname === "/" && <ParticlesContainer />}
+      {/* {location.pathname === "/" && <ParticlesContainer />} */}
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />

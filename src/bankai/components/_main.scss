@@ -48,7 +48,9 @@
 }
 
 .part-container {
-  width: 100vw;
+  width: 70vw;
+  display: flex;
+  margin: 0 0 0 auto;
   height: 100vh;
   position: fixed;
   left: 0;
