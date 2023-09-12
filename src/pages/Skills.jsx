@@ -3,9 +3,6 @@ import { motion } from "framer-motion";
 
 import Loader from "../components/Loader";
 
-import "../../public/serviceWorker";
-// import "../../serviceWorker";
-
 import reactl from "../assets/react.svg";
 import vite from "../assets/vite.svg";
 import blender from "../assets/blender.png";
@@ -63,21 +60,6 @@ const variantText = {
   },
 };
 
-// const data = [
-//   { skill: "React" },
-//   { skill: "Vite" },
-//   { skill: "Sass" },
-//   { skill: "JavaScript" },
-//   { skill: "HTML5" },
-//   { skill: "CSS3" },
-
-//   { skill: "BootStrap" },
-//   { skill: "ThreeJs" },
-//   { skill: "RestAPI" },
-//   { skill: "Firebase" },
-//   { skill: "Blender" },
-// ];
-
 const data = [
   { skill: "React", imgSrc: reactl },
   { skill: "Vite", imgSrc: vite },
@@ -94,43 +76,6 @@ const data = [
 ];
 
 export default function Skills() {
-  // const [cachedImages, setCachedImages] = useState([]);
-
-  // //fetchhh
-  // useEffect(() => {
-  //   async function fetchCachedImages() {
-  //     const imageUrls = [
-  //       "/src/assets/react.svg",
-  //       "/src/assets/vite.svg",
-  //       "/src/assets/sass.png",
-  //       "/src/assets/js.png",
-  //       "/src/assets/html.png",
-  //       "/src/assets/css.png",
-  //       "/src/assets/boot.png",
-  //       "/src/assets/three.png",
-  //       "/src/assets/api.png",
-  //       "/src/assets/firebase.png",
-  //       "/src/assets/blender.png",
-  //     ];
-
-  //     const cachedImagesArray = [];
-
-  //     for (const imageUrl of imageUrls) {
-  //       const cachedResponse = await self.getCachedImage(imageUrl);
-
-  //       if (cachedResponse) {
-  //         const blob = await cachedResponse.blob();
-  //         const dataUrl = URL.createObjectURL(blob);
-  //         cachedImagesArray.push({ url: imageUrl, dataUrl });
-  //       }
-  //     }
-
-  //     setCachedImages(cachedImagesArray);
-  //   }
-
-  //   fetchCachedImages();
-  // }, []);
-
   const skillsElement = data.map((item, index) => {
     return (
       <div
