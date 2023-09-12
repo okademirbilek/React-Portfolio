@@ -54,3 +54,18 @@
     }
   }
 }
+
+.tab-bar {
+  @extend %flex-layout;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0px;
+  background: rgba(0, 255, 162, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 162, 0.25);
+  height: 10vh;
+  padding: 0 10px;
+  // border-top-right-radius: 30px;
+  // border-top-left-radius: 30px;
+}

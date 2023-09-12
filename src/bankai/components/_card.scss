@@ -7,6 +7,12 @@
   .projects {
     width: 60%;
     gap: 1.5rem;
+    margin-bottom: 10vh;
+
+    @include lg {
+      margin-bottom: 0;
+    }
+
     .card {
       position: relative;
       border: 1px solid $backColor;

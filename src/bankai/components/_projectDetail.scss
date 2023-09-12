@@ -4,6 +4,13 @@
 .project-detail {
   transform-origin: center;
   // margin-top: 2rem;
+  width: 95%;
+
+  @include lg {
+    margin-bottom: 5vh;
+    width: 100%;
+  }
+
   h1 {
     font-size: $font-size-xl;
   }
@@ -22,12 +29,30 @@
   strong {
     color: $secondary;
   }
+
+  .social-con {
+    gap: 10px;
+    @include lg {
+      gap: 30px;
+    }
+  }
+}
+
+.special {
+  width: 95%;
+  @include lg {
+    width: 100%;
+  }
 }
 
 .back {
   background: rgba(35, 60, 122, 0.1);
-  // background: rgba(35, 60, 122, 0.1);
   -webkit-backdrop-filter: blur(1px);
   backdrop-filter: blur(1px);
   border: 1px solid rgba(255, 255, 255, 0.25);
+  margin-bottom: 15vh;
+
+  @include lg {
+    margin-bottom: 5vh;
+  }
 }

@@ -4,8 +4,9 @@
 
 .home {
   position: relative;
+  margin-bottom: 15vh;
   .main {
-    margin-top: 10em;
+    margin-top: 5em;
     flex-direction: column;
     justify-content: center;
     background: rgba(35, 60, 122, 0.1);
@@ -30,12 +31,11 @@
 
   .mainImg {
     position: fixed;
-    bottom: 0;
+    bottom: 10vh;
   }
 
-  @include xl {
+  @include lg {
     .mainImg {
-      position: fixed;
       top: 0;
     }
   }
@@ -48,9 +48,8 @@
 }
 
 .part-container {
-  width: 70vw;
+  width: 100vw;
   display: flex;
-  margin: 0 0 0 auto;
   height: 100vh;
   position: fixed;
   left: 0;
@@ -88,6 +87,22 @@
     &:hover {
       scale: 1.2;
       color: #323232;
+    }
+  }
+}
+
+//@media queries
+@include lg {
+  .part-container {
+    width: 70vw;
+    margin: 0 0 0 auto;
+  }
+
+  .home {
+    margin-bottom: 0;
+
+    .main {
+      margin-top: 10em;
     }
   }
 }

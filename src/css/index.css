@@ -535,6 +535,12 @@ img {
 .project-container .projects {
   width: 60%;
   gap: 1.5rem;
+  margin-bottom: 10vh;
+}
+@media (min-width: 960px) {
+  .project-container .projects {
+    margin-bottom: 0;
+  }
 }
 .project-container .projects .card {
   position: relative;
@@ -1010,7 +1016,7 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
   background-color: rgba(210, 179, 100, 0.1);
 }
 
-.navbar .container, .navbar-cardColor .container, .navbar-white .container, .navbar-backColor .container, .navbar-orange .container, .navbar-info .container, .navbar-error .container, .navbar-secondary .container, .navbar-primary .container, .navbar, .navbar-cardColor, .navbar-white, .navbar-backColor, .navbar-orange, .navbar-info, .navbar-error, .navbar-secondary, .navbar-primary {
+.tab-bar, .navbar .container, .navbar-cardColor .container, .navbar-white .container, .navbar-backColor .container, .navbar-orange .container, .navbar-info .container, .navbar-error .container, .navbar-secondary .container, .navbar-primary .container, .navbar, .navbar-cardColor, .navbar-white, .navbar-backColor, .navbar-orange, .navbar-info, .navbar-error, .navbar-secondary, .navbar-primary {
   width: 100%;
   display: flex;
   align-items: center;
@@ -1074,11 +1080,24 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
     display: flex;
   }
 }
+.tab-bar {
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0px;
+  background: rgba(0, 255, 162, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 162, 0.25);
+  height: 10vh;
+  padding: 0 10px;
+}
+
 .home {
   position: relative;
+  margin-bottom: 15vh;
 }
 .home .main {
-  margin-top: 10em;
+  margin-top: 5em;
   flex-direction: column;
   justify-content: center;
   background: rgba(35, 60, 122, 0.1);
@@ -1101,11 +1120,10 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
 }
 .home .mainImg {
   position: fixed;
-  bottom: 0;
+  bottom: 10vh;
 }
-@media (min-width: 1200px) {
+@media (min-width: 960px) {
   .home .mainImg {
-    position: fixed;
     top: 0;
   }
 }
@@ -1117,9 +1135,8 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
 }
 
 .part-container {
-  width: 70vw;
+  width: 100vw;
   display: flex;
-  margin: 0 0 0 auto;
   height: 100vh;
   position: fixed;
   left: 0;
@@ -1153,13 +1170,32 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
   color: #323232;
 }
 
+@media (min-width: 960px) {
+  .part-container {
+    width: 70vw;
+    margin: 0 0 0 auto;
+  }
+  .home {
+    margin-bottom: 0;
+  }
+  .home .main {
+    margin-top: 10em;
+  }
+}
 .about-container {
   justify-content: center;
   align-items: center;
-  gap: 5rem;
   flex-flow: row wrap;
   max-width: 1300px;
-  margin-top: 9em;
+  margin-top: 1em;
+  margin-bottom: 15vh;
+}
+@media (min-width: 960px) {
+  .about-container {
+    margin-top: 9em;
+    gap: 5rem;
+    margin-bottom: 0;
+  }
 }
 .about-container .about {
   flex-direction: column;
@@ -1202,7 +1238,13 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
   height: 40%;
   max-width: 600px;
   min-width: 300px;
+  margin-right: 3em;
   margin-bottom: 1rem;
+}
+@media (min-width: 960px) {
+  .about-container img {
+    margin: 0;
+  }
 }
 
 .skills-container {
@@ -1211,6 +1253,13 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
   align-items: center;
   justify-content: center;
   overflow: auto;
+  margin-bottom: 12vh;
+}
+@media (min-width: 960px) {
+  .skills-container {
+    margin-bottom: 0;
+    margin-top: 1em;
+  }
 }
 .skills-container .skills {
   width: 100%;
@@ -1252,6 +1301,9 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
   max-width: 700px;
 }
 
+.contact {
+  margin-bottom: 15vh;
+}
 .contact .row {
   height: 100%;
 }
@@ -1330,6 +1382,13 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
 
 .project-detail {
   transform-origin: center;
+  width: 95%;
+}
+@media (min-width: 960px) {
+  .project-detail {
+    margin-bottom: 5vh;
+    width: 100%;
+  }
 }
 .project-detail h1 {
   font-size: 2rem;
@@ -1345,12 +1404,35 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
 .project-detail strong {
   color: #1ac888;
 }
+.project-detail .social-con {
+  gap: 10px;
+}
+@media (min-width: 960px) {
+  .project-detail .social-con {
+    gap: 30px;
+  }
+}
+
+.special {
+  width: 95%;
+}
+@media (min-width: 960px) {
+  .special {
+    width: 100%;
+  }
+}
 
 .back {
   background: rgba(35, 60, 122, 0.1);
   -webkit-backdrop-filter: blur(1px);
   backdrop-filter: blur(1px);
   border: 1px solid rgba(255, 255, 255, 0.25);
+  margin-bottom: 15vh;
+}
+@media (min-width: 960px) {
+  .back {
+    margin-bottom: 5vh;
+  }
 }
 
 .p-0 {

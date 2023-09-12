@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./css/index.css";
 import Home from "./pages/Home";
 import { Routes, Route } from "react-router-dom";
@@ -13,21 +13,41 @@ import NotFound from "./pages/NotFound";
 import { SnackbarProvider } from "notistack";
 
 import ProjectDetail from "./pages/ProjectDetail";
+import BottomTabBar from "./components/BottomTabBar";
 
 function App() {
   //Get location information
   const location = useLocation();
-  const [is404Page, setIs404Page] = React.useState(false);
+
+  //store the current size of window
+  const [screenSize, setScreenSize] = useState(getCurrentDimension());
+
+  function getCurrentDimension() {
+    return {
+      width: window.innerWidth,
+      // height: window.innerHeight,
+    };
+  }
+
+  //check windowsize for bottom navigation bar
+  useEffect(() => {
+    const updateDimension = () => {
+      setScreenSize(getCurrentDimension());
+    };
+    window.addEventListener("resize", updateDimension);
+
+    // clean up function  for unmount component
+    return () => {
+      window.removeEventListener("resize", updateDimension);
+    };
+  }, [screenSize]);
 
   return (
     //Animate presence for routing animations exit
 
     <div className="backColor  vh-100">
-      {!location.pathname === "/" ||
-      (is404Page && location.key === "default") ? null : (
-        <Header />
-      )}
-      {/* {location.pathname === "/" && <ParticlesContainer />} */}
+      <Header />
+
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
@@ -36,9 +56,10 @@ function App() {
           <Route path="/projects/:id" element={<ProjectDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound setIs404Page={setIs404Page} />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>
+      {screenSize.width < 960 ? <BottomTabBar /> : null}
       <SnackbarProvider autoHideDuration={1500} />
     </div>
   );

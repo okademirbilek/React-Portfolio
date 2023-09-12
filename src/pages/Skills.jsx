@@ -80,7 +80,7 @@ export default function Skills() {
     return (
       <div
         key={index}
-        className="container display-f justify-center col-xs-12 col-2-md col-3-lg gaps "
+        className="container display-f justify-center col-xs-12 col-3-md col-3-lg gaps "
       >
         <div className="row display-f justify-space-around align-center fd-c">
           <motion.img
@@ -107,7 +107,7 @@ export default function Skills() {
     );
   });
   return (
-    <motion.div className="skills-container container mt-2">
+    <motion.div className="skills-container container ">
       <div className="row skills display-f justify-center gaps ">
         {/* {cachedImages.length > 0 ? (
           skillsElement

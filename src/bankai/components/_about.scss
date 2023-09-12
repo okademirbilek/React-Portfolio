@@ -4,10 +4,18 @@
 .about-container {
   justify-content: center;
   align-items: center;
-  gap: 5rem;
+
   flex-flow: row wrap;
   max-width: 1300px;
-  margin-top: 9em;
+  margin-top: 1em;
+  margin-bottom: 15vh;
+
+  //@media queries
+  @include lg {
+    margin-top: 9em;
+    gap: 5rem;
+    margin-bottom: 0;
+  }
 
   .about {
     flex-direction: column;
@@ -62,8 +70,14 @@
     height: 40%;
     max-width: 600px;
     min-width: 300px;
+    margin-right: 3em;
     margin-bottom: 1rem;
+
+    @include lg {
+      margin: 0;
+    }
   }
+
   // .splash {
   //   position: absolute;
   //   top: 0;

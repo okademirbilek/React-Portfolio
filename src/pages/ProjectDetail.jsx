@@ -1,5 +1,5 @@
 import React, { Suspense, useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, Navigate, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import projectData from "../projects";
@@ -45,6 +45,21 @@ const item = {
 
 export default function ProjectDetail() {
   const params = useParams();
+
+  const navigate = useNavigate();
+
+  //preventing when user gives string to page other than number
+  // useEffect(() => {
+  //   console.log("id is changed");
+  //   console.log(params.id);
+  //   if (isNaN(parseInt(params.id))) {
+  //     navigate("/projects");
+  //     console.log("bad syntex");
+  //   } else {
+  //     console.log("keep going on ");
+  //   }
+  // }, [params.id]);
+
   const data = projectData.filter((item) => item.id === params.id)[0];
   const [IconsArray, setIconsArray] = useState([]);
 
@@ -71,7 +86,7 @@ export default function ProjectDetail() {
         </Link>
 
         <motion.div
-          className=" row mt-2 display-f  align-center gp-3"
+          className="social-con row mt-2 display-f  align-center "
           variants={item}
         >
           <h1 className="">{data.title} </h1>
@@ -124,11 +139,11 @@ export default function ProjectDetail() {
       </motion.section>
 
       <motion.section
-        className="container back  display-f fd-c p-3  br-lg mt-4 mb-4"
+        className="container special back  display-f fd-c p-3  br-lg mt-4 "
         variants={item}
       >
         <h2>Tech Stack</h2>
-        <div className="back p-2 br-lg display-f gp-1 mt-1 row justify-center">
+        <div className="back p-2 br-lg display-f gp-1 mt-1 row justify-center align-center">
           {IconsArray.map((item) => item)}
         </div>
         <h2 className="mt-2">Experience</h2>
