@@ -13,7 +13,8 @@ import ParticlesContainer from "./components/ParticlesContainer";
 import NotFound from "./pages/NotFound";
 import { SnackbarProvider } from "notistack";
 
-import "../serviceWorker";
+// import "../serviceWorker";
+import "../public/serviceWorker";
 import ProjectDetail from "./pages/ProjectDetail";
 
 // import reactl from "./assets/react.svg";
@@ -50,7 +51,7 @@ function App() {
 
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker
-      .register("/serviceWorker.js", {
+      .register("https://okandemirbilek.netlify.app/serviceWorker.js", {
         scope: "/",
       })
       .then((registration) => {

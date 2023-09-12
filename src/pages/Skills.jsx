@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 
 import Loader from "../components/Loader";
 
-import "../../serviceWorker";
+import "../../public/serviceWorker";
+// import "../../serviceWorker";
 
 const variantLogo = {
   hover: {
