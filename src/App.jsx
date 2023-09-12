@@ -14,7 +14,7 @@ import NotFound from "./pages/NotFound";
 import { SnackbarProvider } from "notistack";
 
 // import "../serviceWorker";
-import "../public/serviceWorker";
+// import "../public/serviceWorker";
 import ProjectDetail from "./pages/ProjectDetail";
 
 // import reactl from "./assets/react.svg";
@@ -49,21 +49,23 @@ function App() {
   //   { skill: "Blender", imgSrc: blender },
   // ];
 
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker
-      .register("https://okandemirbilek.netlify.app/serviceWorker.js", {
-        scope: "/",
-      })
-      .then((registration) => {
-        console.log(
-          "Service Worker registered with scope:",
-          registration.scope
-        );
-      })
-      .catch((error) => {
-        console.error("Service Worker registration failed:", error);
-      });
-  }
+  // .register("https://okandemirbilek.netlify.app/serviceWorker.js", {
+
+  // if ("serviceWorker" in navigator) {
+  //   navigator.serviceWorker
+  //     .register("/serviceWorker.js", {
+  //       scope: "/",
+  //     })
+  //     .then((registration) => {
+  //       console.log(
+  //         "Service Worker registered with scope:",
+  //         registration.scope
+  //       );
+  //     })
+  //     .catch((error) => {
+  //       console.error("Service Worker registration failed:", error);
+  //     });
+  // }
 
   // useEffect(() => {
   //   preloadImages(data);
