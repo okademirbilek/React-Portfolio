@@ -1,35 +1,38 @@
-const staticDevCoffee = "dev-coffee-site-v1";
+const CACHE_NAME = "my-cache";
 const assets = [
   "/",
-  "./src/assets/react.svg",
-  "./src/assets/vite.svg",
-  "./src/assets/sass.png",
-  "./src/assets/js.png",
-  "./src/assets/html.png",
-  "./src/assets/css.png",
-  "./src/assets/boot.png",
-  "./src/assets/three.png",
-  "./src/assets/api.png",
-  "./src/assets/firebase.png",
-  "./src/assets/blender.png",
-  "./src/assets/myimage.jpeg",
+  "/src/assets/react.svg",
+  "/src/assets/vite.svg",
+  "/src/assets/sass.png",
+  "/src/assets/js.png",
+  "/src/assets/html.png",
+  "/src/assets/css.png",
+  "/src/assets/boot.png",
+  "/src/assets/three.png",
+  "/src/assets/api.png",
+  "/src/assets/firebase.png",
+  "/src/assets/blender.png",
+  "/src/assets/myimage.jpeg",
 ];
 
 self.addEventListener("install", (installEvent) => {
+  console.log("installing service worker!");
   installEvent.waitUntil(
-    caches.open(staticDevCoffee).then((cache) => {
-      cache.addAll(assets);
+    caches.open(CACHE_NAME).then((cache) => {
+      return cache.addAll(assets).then(() => self.skipWaiting());
     })
+    //sonradan eklendi
   );
 });
 
 // activate event
 self.addEventListener("activate", (evt) => {
+  console.log("activating service worker");
   evt.waitUntil(
     caches.keys().then((keys) => {
       return Promise.all(
         keys
-          .filter((key) => key !== staticDevCoffee)
+          .filter((key) => key !== CACHE_NAME)
           .map((key) => caches.delete(key))
       );
     })
@@ -71,7 +74,7 @@ self.addEventListener("fetch", (fetchEvent) => {
 // Wrap the function you want to export in a self-invoking function
 (function () {
   async function getCachedImage(imageUrl) {
-    const cache = await caches.open(staticDevCoffee); // Use the correct cache name
+    const cache = await caches.open(CACHE_NAME); // Use the correct cache name
     const cachedResponse = await cache.match(imageUrl);
 
     if (cachedResponse) {
@@ -91,7 +94,7 @@ self.addEventListener("fetch", (fetchEvent) => {
 })();
 
 // async function getCachedImage(imageUrl) {
-//   const cache = await caches.open(staticDevCoffee); // Use the correct cache name
+//   const cache = await caches.open(CACHE_NAME); // Use the correct cache name
 //   const cachedResponse = await cache.match(imageUrl);
 
 //   if (cachedResponse) {
