@@ -31,7 +31,7 @@ const projectData = [
     experience:
       "I learned these during the development: dynamic import for the React Icon Library for optimization; working with service workers for caching image data; and also Framer motion animations with variants.",
     github: "https://github.com/okademirbilek/React-Portfolio",
-    website: "https://watchlistod.netlify.app/login",
+    website: "https://okandemirbilek.netlify.app/",
     provider: "netlify",
   },
   {
