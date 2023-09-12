@@ -50,7 +50,7 @@ function App() {
 
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker
-      .register("https://okandemirbilek.netlify.app/serviceWorker.js", {
+      .register("/serviceWorker.js", {
         scope: "/",
       })
       .then((registration) => {
