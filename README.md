@@ -1,2 +1,5 @@
 # React-Portfolio
 link:https://okandemirbilek.netlify.app/
+
+![1](https://github.com/okademirbilek/React-Portfolio/assets/48480726/7c3f0f1a-2e49-4bbd-8272-06be8041d5a0)
+![2](https://github.com/okademirbilek/React-Portfolio/assets/48480726/21577c37-d8e2-42f5-8bf7-ccf309848c51)
