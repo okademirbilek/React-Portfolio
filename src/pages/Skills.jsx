@@ -6,6 +6,18 @@ import Loader from "../components/Loader";
 import "../../public/serviceWorker";
 // import "../../serviceWorker";
 
+import reactl from "../assets/react.svg";
+import vite from "../assets/vite.svg";
+import blender from "../assets/blender.png";
+import boot from "../assets/boot.png";
+import css from "../assets/css.png";
+import firebase from "../assets/firebase.png";
+import html1 from "../assets/html.png";
+import js from "../assets/js.png";
+import api from "../assets/api.png";
+import sass from "../assets/sass.png";
+import three from "../assets/three.png";
+
 const variantLogo = {
   hover: {
     scale: 1.3,
@@ -51,60 +63,75 @@ const variantText = {
   },
 };
 
-const data = [
-  { skill: "React" },
-  { skill: "Vite" },
-  { skill: "Sass" },
-  { skill: "JavaScript" },
-  { skill: "HTML5" },
-  { skill: "CSS3" },
+// const data = [
+//   { skill: "React" },
+//   { skill: "Vite" },
+//   { skill: "Sass" },
+//   { skill: "JavaScript" },
+//   { skill: "HTML5" },
+//   { skill: "CSS3" },
 
-  { skill: "BootStrap" },
-  { skill: "ThreeJs" },
-  { skill: "RestAPI" },
-  { skill: "Firebase" },
-  { skill: "Blender" },
+//   { skill: "BootStrap" },
+//   { skill: "ThreeJs" },
+//   { skill: "RestAPI" },
+//   { skill: "Firebase" },
+//   { skill: "Blender" },
+// ];
+
+const data = [
+  { skill: "React", imgSrc: reactl },
+  { skill: "Vite", imgSrc: vite },
+  { skill: "Sass", imgSrc: sass },
+  { skill: "JavaScript", imgSrc: js },
+  { skill: "HTML5", imgSrc: html1 },
+  { skill: "CSS3", imgSrc: css },
+
+  { skill: "BootStrap", imgSrc: boot },
+  { skill: "ThreeJs", imgSrc: three },
+  { skill: "RestAPI", imgSrc: api },
+  { skill: "Firebase", imgSrc: firebase },
+  { skill: "Blender", imgSrc: blender },
 ];
 
 export default function Skills() {
-  const [cachedImages, setCachedImages] = useState([]);
+  // const [cachedImages, setCachedImages] = useState([]);
 
-  //fetchhh
-  useEffect(() => {
-    async function fetchCachedImages() {
-      const imageUrls = [
-        "/src/assets/react.svg",
-        "/src/assets/vite.svg",
-        "/src/assets/sass.png",
-        "/src/assets/js.png",
-        "/src/assets/html.png",
-        "/src/assets/css.png",
-        "/src/assets/boot.png",
-        "/src/assets/three.png",
-        "/src/assets/api.png",
-        "/src/assets/firebase.png",
-        "/src/assets/blender.png",
-      ];
+  // //fetchhh
+  // useEffect(() => {
+  //   async function fetchCachedImages() {
+  //     const imageUrls = [
+  //       "/src/assets/react.svg",
+  //       "/src/assets/vite.svg",
+  //       "/src/assets/sass.png",
+  //       "/src/assets/js.png",
+  //       "/src/assets/html.png",
+  //       "/src/assets/css.png",
+  //       "/src/assets/boot.png",
+  //       "/src/assets/three.png",
+  //       "/src/assets/api.png",
+  //       "/src/assets/firebase.png",
+  //       "/src/assets/blender.png",
+  //     ];
 
-      const cachedImagesArray = [];
+  //     const cachedImagesArray = [];
 
-      for (const imageUrl of imageUrls) {
-        const cachedResponse = await self.getCachedImage(imageUrl);
+  //     for (const imageUrl of imageUrls) {
+  //       const cachedResponse = await self.getCachedImage(imageUrl);
 
-        if (cachedResponse) {
-          const blob = await cachedResponse.blob();
-          const dataUrl = URL.createObjectURL(blob);
-          cachedImagesArray.push({ url: imageUrl, dataUrl });
-        }
-      }
+  //       if (cachedResponse) {
+  //         const blob = await cachedResponse.blob();
+  //         const dataUrl = URL.createObjectURL(blob);
+  //         cachedImagesArray.push({ url: imageUrl, dataUrl });
+  //       }
+  //     }
 
-      setCachedImages(cachedImagesArray);
-    }
+  //     setCachedImages(cachedImagesArray);
+  //   }
 
-    fetchCachedImages();
-  }, []);
+  //   fetchCachedImages();
+  // }, []);
 
-  const skillsElement = cachedImages.map((item, index) => {
+  const skillsElement = data.map((item, index) => {
     return (
       <div
         key={index}
@@ -112,7 +139,7 @@ export default function Skills() {
       >
         <div className="row display-f justify-space-around align-center fd-c">
           <motion.img
-            src={item.url}
+            src={item.imgSrc}
             className="s-logo cursor-p br-sm"
             variants={variantLogo}
             initial="hidden"
@@ -127,7 +154,8 @@ export default function Skills() {
             animate="visible"
             exit="exit"
           >
-            {data[index].skill}
+            {/* {data[index].skill} */}
+            {item.skill}
           </motion.h2>
         </div>
       </div>
@@ -136,14 +164,15 @@ export default function Skills() {
   return (
     <motion.div className="skills-container container mt-2">
       <div className="row skills display-f justify-center gaps ">
-        {cachedImages.length > 0 ? (
+        {/* {cachedImages.length > 0 ? (
           skillsElement
         ) : (
           <div className="container display-f  align-center justify-center fd-c">
             <p>Loading images...</p>
             <Loader />
           </div>
-        )}
+        )} */}
+        {skillsElement}
       </div>
     </motion.div>
   );
