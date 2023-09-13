@@ -36,7 +36,9 @@ export default function Contact() {
   const [status, setStatus] = useState("idle");
   const [error, setError] = useState(null);
 
-  console.log(a);
+  console.log(key1);
+  console.log(key2);
+  console.log(key3);
 
   const form = useRef();
 
