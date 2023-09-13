@@ -4,7 +4,9 @@ import { enqueueSnackbar } from "notistack";
 
 import { motion } from "framer-motion";
 
-const a = import.meta.env.VITE_COMMIT_REF;
+const key1 = import.meta.env.VITE_key1;
+const key2 = import.meta.env.VITE_key2;
+const key3 = import.meta.env.VITE_key3;
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -44,13 +46,15 @@ export default function Contact() {
     setError("");
     setStatus("submitting");
 
+    // .sendForm(
+    //   "service_i9h67mw",
+    //   "template_fga3nbf",
+    //   form.current,
+    //   "kEsdsB_ty7XQ4hxXK"
+    // )
+
     emailjs
-      .sendForm(
-        "service_i9h67mw",
-        "template_fga3nbf",
-        form.current,
-        "kEsdsB_ty7XQ4hxXK"
-      )
+      .sendForm(key1, key2, form.current, key3)
       .then(
         (result) => {
           console.log(result.text);
