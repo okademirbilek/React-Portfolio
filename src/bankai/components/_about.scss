@@ -58,16 +58,7 @@
     position: relative;
   }
 
-  // .splash-img {
-  //   background-image: url("splash.svg");
-  //   background-repeat: no-repeat;
-  //   background-position: center;
-  //   width: 600px;
-  //   height: 400px;
-  // }
-
   img {
-    height: 40%;
     max-width: 600px;
     min-width: 300px;
     margin-right: 3em;
@@ -77,16 +68,4 @@
       margin: 0;
     }
   }
-
-  // .splash {
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   max-width: 600px;
-  //   max-height: 436.36px;
-  //   width: 600px;
-  //   height: 436.36px;
-  // }
 }
