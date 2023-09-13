@@ -63,6 +63,8 @@ export default function Home() {
         animate="visible"
         exit="exit"
         src={mainImg}
+        alt="background image anime character gojo satoru"
+        title="gojo satoru"
       ></motion.img>
       <div className="container  display-f  br-lg">
         <motion.div

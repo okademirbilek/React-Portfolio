@@ -43,13 +43,6 @@ export default function Contact() {
     setError("");
     setStatus("submitting");
 
-    // .sendForm(
-    //   "service_i9h67mw",
-    //   "template_fga3nbf",
-    //   form.current,
-    //   "kEsdsB_ty7XQ4hxXK"
-    // )
-
     emailjs
       .sendForm(key1, key2, form.current, key3)
       .then(
@@ -101,6 +94,7 @@ export default function Contact() {
               placeholder="Name"
               required
               variants={item}
+              aria-label="username"
             />
 
             <motion.input
@@ -112,6 +106,7 @@ export default function Contact() {
               maxLength={63}
               required
               variants={item}
+              aria-label="email"
             />
           </div>
 
@@ -122,6 +117,7 @@ export default function Contact() {
             placeholder="Subject"
             minLength={6}
             variants={item}
+            aria-label="subject"
           />
           <motion.textarea
             className="col-12-xs col-12-xl col-12-md vw-full"
@@ -131,6 +127,7 @@ export default function Contact() {
             maxLength={250}
             required
             variants={item}
+            aria-label="message"
           />
           {error && (
             <div className="alert">
