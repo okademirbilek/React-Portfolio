@@ -76,7 +76,7 @@ export default function Contact() {
 
   return (
     <motion.div
-      className="contact container  mt-5 pt-1 pb-1 "
+      className="contact container pt-1 pb-1 "
       variants={container}
       initial="hidden"
       animate="visible"

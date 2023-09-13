@@ -17,6 +17,10 @@
 
 .contact {
   margin-bottom: 15vh;
+
+  @include lg {
+    margin-top: 5em;
+  }
   .row {
     height: 100%;
     h1 {

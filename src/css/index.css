@@ -15,6 +15,7 @@ body {
   font-family: Poppins;
   color: whitesmoke;
   position: relative;
+  min-height: 100dvh;
 }
 
 ul {
@@ -532,6 +533,11 @@ img {
 .project-container {
   flex-direction: column;
 }
+@media (min-width: 960px) {
+  .project-container {
+    margin-top: 5em;
+  }
+}
 .project-container .projects {
   width: 60%;
   gap: 1.5rem;
@@ -1037,7 +1043,7 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
   z-index: 1;
 }
 .navbar a:hover, .navbar-cardColor a:hover, .navbar-white a:hover, .navbar-backColor a:hover, .navbar-orange a:hover, .navbar-info a:hover, .navbar-error a:hover, .navbar-secondary a:hover, .navbar-primary a:hover {
-  color: #fc5241;
+  color: #1ac888;
 }
 .navbar-primary {
   background-color: #fc5241;
@@ -1084,17 +1090,28 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
   justify-content: space-around;
   position: fixed;
   bottom: 0px;
-  background: rgba(0, 255, 162, 0.5);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 255, 162, 0.25);
+  background: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   height: 10vh;
-  padding: 0 10px;
+}
+.tab-bar a {
+  color: #050f28;
+}
+.tab-bar a div {
+  width: 65px;
+}
+@media (min-width: 720px) {
+  .tab-bar a div {
+    width: 100px;
+    height: 80px;
+  }
 }
 
 .home {
   position: relative;
-  margin-bottom: 15vh;
+  margin-bottom: 10vh;
 }
 .home .main {
   margin-top: 5em;
@@ -1303,6 +1320,11 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
 
 .contact {
   margin-bottom: 15vh;
+}
+@media (min-width: 960px) {
+  .contact {
+    margin-top: 5em;
+  }
 }
 .contact .row {
   height: 100%;

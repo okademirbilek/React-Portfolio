@@ -33,7 +33,7 @@ const variantTitle = {
 
 export default function Projects() {
   return (
-    <div className="project-container container display-f   justify-center align-center mt-5  card-border pb-4 br-lg ">
+    <div className="project-container container display-f   justify-center align-center   card-border pb-4 br-lg ">
       <div className=" display-f justify-center align-center fd-c">
         <motion.h1
           className=" mt-4 display-f align-center project-title"

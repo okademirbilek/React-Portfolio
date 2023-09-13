@@ -36,7 +36,7 @@ export default function Header() {
     fontWeight: "bold",
     textDecoration: "underline",
 
-    color: "#fc5241",
+    color: "#1ac888",
     scale: "1.3",
   };
   return (

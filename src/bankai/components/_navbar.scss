@@ -23,7 +23,7 @@
     font-size: $font-size-md;
     z-index: 1;
     &:hover {
-      color: $primary;
+      color: $secondary;
     }
   }
 
@@ -60,12 +60,23 @@
   justify-content: space-around;
   position: fixed;
   bottom: 0px;
-  background: rgba(0, 255, 162, 0.5);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 255, 162, 0.25);
+  // background: rgba(0, 255, 162, 0.5);
+  // -webkit-backdrop-filter: blur(10px);
+  // backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   height: 10vh;
-  padding: 0 10px;
-  // border-top-right-radius: 30px;
-  // border-top-left-radius: 30px;
+
+  a {
+    color: $backColor;
+    div {
+      width: 65px;
+      @include md {
+        width: 100px;
+        height: 80px;
+      }
+    }
+  }
 }

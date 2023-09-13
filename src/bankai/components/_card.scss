@@ -4,6 +4,9 @@
 
 .project-container {
   flex-direction: column;
+  @include lg {
+    margin-top: 5em;
+  }
   .projects {
     width: 60%;
     gap: 1.5rem;
