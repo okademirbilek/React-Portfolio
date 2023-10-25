@@ -7,7 +7,7 @@ import splash from "../assets/splash.svg"
 
 import { BsLinkedin, BsGithub } from "react-icons/bs"
 
-import resume from "../assets/21octobercv.pdf"
+import resume from "../assets/okandemirbilekcv.pdf"
 
 const variantTitle = {
   hidden: {
