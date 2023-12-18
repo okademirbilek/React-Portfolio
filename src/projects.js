@@ -88,30 +88,59 @@ const projectData = [
   },
   {
     id: "4",
-    title: "Quiz App",
+    title: "GYM App",
     images: [
-      "https://github.com/okademirbilek/lostarkimages/blob/main/portfoimg/image9.JPG?raw=true",
-      "https://github.com/okademirbilek/lostarkimages/blob/main/portfoimg/image10.JPG?raw=true",
+      "https://github.com/okademirbilek/lostarkimages/blob/main/portfoimg/gym5.png?raw=true",
+      "https://github.com/okademirbilek/lostarkimages/blob/main/portfoimg/gym7.png?raw=true",
     ],
     layoutImg:
-      "https://github.com/okademirbilek/lostarkimages/blob/main/portfoimg/image11.JPG?raw=true",
+      "https://github.com/okademirbilek/lostarkimages/blob/main/portfoimg/gym3.png?raw=true",
     logos: [
       "SiVite",
       "FaReact",
       "SiReactrouter",
       "SiJavascript",
       "FaHtml5",
-      "SiCss3",
+      "FaSass",
+      "SiGulp",
+      "SiFramer",
+      "SiFirebase",
     ],
     library: [],
     summary:
-      "It is a quiz application where you can choose any subject with multiple difficulty levels. After solving the test, you can see the answers and accuracy percentage.",
+      "It is a gym app that you can sign up for. It uses Firebase for authentication and contains different roles, like online users and admins. It offers a system for users to follow the meal plan, workouts, payments, lessons, and body measurements given by a personal trainer, and it also has an admin dashboard, which is going to be used by trainers to provide these systems for their students.",
     experience:
-      "During the development, I learned about react state management and hooks, as well as data attributes, condititonal rendering, and developing projects in Vercel.",
-    github: "https://github.com/okademirbilek/QuizGame",
-    website: "https://quiz-game-red.vercel.app/",
-    provider: "vercel",
+      "During the development, I learned about these: Firebase storage and admin rules to make our program more secure; dark-light mode using context and SASS variables; language support with the react-i18n library; how to handle multiple file imports with constraints; and how to use responsive mui data tables and react uuid to generate special ids for specific operations; and how to use index files to handle multiple file imports that make your component ugly.",
+    github: "https://github.com/okademirbilek/GYMAPP",
+    website: "https://demirbilekgym.netlify.app/",
+    provider: "netlify",
   },
+  // {
+  //   id: "4",
+  //   title: "Quiz App",
+  //   images: [
+  //     "https://github.com/okademirbilek/lostarkimages/blob/main/portfoimg/image9.JPG?raw=true",
+  //     "https://github.com/okademirbilek/lostarkimages/blob/main/portfoimg/image10.JPG?raw=true",
+  //   ],
+  //   layoutImg:
+  //     "https://github.com/okademirbilek/lostarkimages/blob/main/portfoimg/image11.JPG?raw=true",
+  //   logos: [
+  //     "SiVite",
+  //     "FaReact",
+  //     "SiReactrouter",
+  //     "SiJavascript",
+  //     "FaHtml5",
+  //     "SiCss3",
+  //   ],
+  //   library: [],
+  //   summary:
+  //     "It is a quiz application where you can choose any subject with multiple difficulty levels. After solving the test, you can see the answers and accuracy percentage.",
+  //   experience:
+  //     "During the development, I learned about react state management and hooks, as well as data attributes, condititonal rendering, and developing projects in Vercel.",
+  //   github: "https://github.com/okademirbilek/QuizGame",
+  //   website: "https://quiz-game-red.vercel.app/",
+  //   provider: "vercel",
+  // },
 ];
 
 export default projectData;

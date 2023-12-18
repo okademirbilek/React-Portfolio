@@ -80,7 +80,7 @@ export default function Projects() {
         />
         <ProjectCard
           src={
-            "https://github.com/okademirbilek/lostarkimages/blob/main/quizzica.JPG?raw=true"
+            "https://github.com/okademirbilek/lostarkimages/blob/main/portfoimg/gym8.png?raw=true"
           }
           index={4}
         />
