@@ -1,13 +1,13 @@
-import React from "react"
+import React from "react";
 
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
-import myImage from "../assets/removed.png"
-import splash from "../assets/splash.svg"
+import myImage from "../assets/removed.png";
+import splash from "../assets/splash.svg";
 
-import { BsLinkedin, BsGithub } from "react-icons/bs"
+import { BsLinkedin, BsGithub } from "react-icons/bs";
 
-import resume from "../assets/okandemirbilekcv.pdf"
+import resume from "../assets/okandemirbilekCV.pdf";
 
 const variantTitle = {
   hidden: {
@@ -25,7 +25,7 @@ const variantTitle = {
     x: "-100vw",
     transition: { ease: "easeInOut" },
   },
-}
+};
 
 const variantImage = {
   hidden: {
@@ -46,7 +46,7 @@ const variantImage = {
     opacity: 0,
     transition: { ease: "easeInOut" },
   },
-}
+};
 
 const variantLogo = {
   hover: {
@@ -57,7 +57,7 @@ const variantLogo = {
       duration: 0.3,
     },
   },
-}
+};
 
 export default function About() {
   return (
@@ -131,5 +131,5 @@ export default function About() {
         </motion.div>
       </div>
     </>
-  )
+  );
 }
