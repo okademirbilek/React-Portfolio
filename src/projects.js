@@ -60,11 +60,11 @@ const projectData = [
       "react-icons-kit",
     ],
     summary:
-      "It's a movie website that you can search for a movie, add it to your watchlist, watch the trailer, and watch the movie itself. It also has authentication with Firebase; you need to sign up for the website to see pages.Some libraries inside my project that I didnt mention: notitack-snackbar, react-icons, react-paginate, react-slick-carousel, react-icons-kit.",
+      "It’s a movie website where you can search for a movie, add it to your watchlist, watch the trailer.It also has authentication with Firebase; you need to sign up for the website to see pages. Somelibraries inside my project are Tanstack Query, Notitack-snackbar, React-paginate, React-slickcarousel, and React-icons-kit. I learned these during the development: authentication withFirebase, Firestore database to save user data, env.local environment variables to hide sensetive information, Vite redirects with Spa’s (single page applications), fetch abort to make unnecessary fetch operations with controllers.SRP(Single Responsibility principle) design pattern.",
     experience:
       "I learned these during the development: Firebase with authentication, Firestore database to save user data, env.local environment variables to hide sensetive information such as API keys, Vite redirects with Spa's (single page applications), fetch abort to make unnecessary fetch operations with controllers.",
-    github: "https://github.com/okademirbilek/Movie-WatchList",
-    website: "https://watchlistod.netlify.app/login",
+    github: "https://github.com/okademirbilek/Tailwind-Movie-Watchlist",
+    website: "https://demirbilekmovie.netlify.app/",
     provider: "netlify",
   },
   {

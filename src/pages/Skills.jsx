@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 
 import Loader from "../components/Loader";
@@ -6,12 +6,12 @@ import Loader from "../components/Loader";
 import reactl from "../assets/react.svg";
 import vite from "../assets/vite.svg";
 import blender from "../assets/blender.png";
-import boot from "../assets/boot.png";
+import next from "../assets/nextjs-icon.png";
 import css from "../assets/css.png";
 import firebase from "../assets/firebase.png";
 import html1 from "../assets/html.png";
 import js from "../assets/js.png";
-import api from "../assets/api.png";
+import tailwind from "../assets/Tailwind.png";
 import sass from "../assets/sass.png";
 import three from "../assets/three.png";
 
@@ -68,9 +68,9 @@ const data = [
   { skill: "HTML5", imgSrc: html1 },
   { skill: "CSS3", imgSrc: css },
 
-  { skill: "BootStrap", imgSrc: boot },
+  { skill: "Next.js", imgSrc: next },
   { skill: "ThreeJs", imgSrc: three },
-  { skill: "RestAPI", imgSrc: api },
+  { skill: "Tailwind", imgSrc: tailwind },
   { skill: "Firebase", imgSrc: firebase },
   { skill: "Blender", imgSrc: blender },
 ];
