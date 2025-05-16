@@ -34,8 +34,21 @@
     bottom: 10vh;
   }
 
+  @include md {
+    .mainImg {
+      bottom: 0;
+    }
+  }
+
   @include lg {
     .mainImg {
+      bottom: 0;
+    }
+  }
+
+  @include xxl {
+    .mainImg {
+      position: fixed;
       top: 0;
     }
   }

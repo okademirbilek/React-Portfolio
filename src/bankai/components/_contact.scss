@@ -84,9 +84,6 @@
     input {
       @extend %back;
       height: 60px;
-      &:focus {
-        outline: none;
-      }
     }
 
     button {

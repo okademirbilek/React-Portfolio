@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense, lazy } from "react";
 import "./css/index.css";
 import Home from "./pages/Home";
 import { Routes, Route } from "react-router-dom";
 import Skills from "./pages/Skills";
-import Projects from "./pages/Projects";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import { AnimatePresence } from "framer-motion";
@@ -12,7 +11,12 @@ import Header from "./components/Header";
 import NotFound from "./pages/NotFound";
 import { SnackbarProvider } from "notistack";
 
-import ProjectDetail from "./pages/ProjectDetail";
+// import ProjectDetail from "./pages/ProjectDetail";
+const ProjectDetail = lazy(() => import("./pages/ProjectDetail"));
+
+// import Projects from "./pages/Projects";
+const Projects = lazy(() => import("./pages/Projects"));
+
 import BottomTabBar from "./components/BottomTabBar";
 
 function App() {
@@ -52,8 +56,22 @@ function App() {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
           <Route path="/skills" element={<Skills />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/projects/:id" element={<ProjectDetail />} />
+          <Route
+            path="/projects"
+            element={
+              <Suspense>
+                <Projects />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/projects/:id"
+            element={
+              <Suspense>
+                <ProjectDetail />
+              </Suspense>
+            }
+          />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />

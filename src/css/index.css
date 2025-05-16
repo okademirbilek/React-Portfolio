@@ -1139,8 +1139,19 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
   position: fixed;
   bottom: 10vh;
 }
+@media (min-width: 720px) {
+  .home .mainImg {
+    bottom: 0;
+  }
+}
 @media (min-width: 960px) {
   .home .mainImg {
+    bottom: 0;
+  }
+}
+@media (min-width: 1600px) {
+  .home .mainImg {
+    position: fixed;
     top: 0;
   }
 }
@@ -1378,9 +1389,6 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
 }
 .contact .form input {
   height: 60px;
-}
-.contact .form input:focus {
-  outline: none;
 }
 .contact .form button {
   border: none;

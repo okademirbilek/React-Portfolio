@@ -1,9 +1,6 @@
-import React from "react";
-
 import { motion } from "framer-motion";
 
-import myImage from "../assets/removed.png";
-import splash from "../assets/splash.svg";
+import myImage from "../assets/removed.webp";
 
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 

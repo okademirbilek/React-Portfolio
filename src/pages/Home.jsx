@@ -1,9 +1,8 @@
-import React from "react";
 import "../css/index.css";
 import { motion } from "framer-motion";
-import mainImg from "../assets/Removal-565.png";
+import mainImg from "../assets/Removal-565-90.webp";
 
-import { useTypewriter, Cursor } from "react-simple-typewriter";
+import { useTypewriter } from "react-simple-typewriter";
 
 import ParticlesContainer from "../components/ParticlesContainer";
 

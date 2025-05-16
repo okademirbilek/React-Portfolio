@@ -31,14 +31,15 @@ const variantBox = {
   },
 };
 
-export default function Header() {
-  const activeStyle = {
-    fontWeight: "bold",
-    textDecoration: "underline",
+const activeStyle = {
+  fontWeight: "bold",
+  textDecoration: "underline",
 
-    color: "#1ac888",
-    scale: "1.3",
-  };
+  color: "#1ac888",
+  scale: "1.3",
+};
+
+export default function Header() {
   return (
     <nav className="navbar">
       <div className="container">
