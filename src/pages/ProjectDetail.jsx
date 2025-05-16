@@ -11,8 +11,6 @@ import { FaGithub } from "react-icons/fa";
 import { BiLogoNetlify } from "react-icons/bi";
 import { RxVercelLogo } from "react-icons/rx";
 
-import ImageLoad from "../components/ImageLoad";
-
 const variantCon = {
   hidden: {
     scaleY: 0,
@@ -90,17 +88,19 @@ export default function ProjectDetail() {
           variants={item}
         >
           <h1 className="">{data.title} </h1>
-          <a
+          <Link
             className="site display-f justify-center gp-1  br-sm "
-            href={data.github}
+            to={data.github}
             target="_blank"
+            aria-label="Check Project Github Page"
           >
             <FaGithub size={30} /> <h4>Github</h4>
-          </a>
-          <a
+          </Link>
+          <Link
             className="site display-f justify-center gp-1  br-sm "
             href={data.website}
-            target="_blank"
+            to="_blank"
+            aria-label="Check Project Live Page"
           >
             {data.provider === "netlify" ? (
               <BiLogoNetlify size={30} />
@@ -108,7 +108,7 @@ export default function ProjectDetail() {
               <RxVercelLogo size={30} />
             )}{" "}
             <h4>Website</h4>
-          </a>
+          </Link>
         </motion.div>
 
         <div className="row display-f gp-1 mt-2">

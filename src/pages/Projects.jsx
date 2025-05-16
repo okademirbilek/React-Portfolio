@@ -2,6 +2,7 @@ import React from "react";
 import ProjectCard from "../components/ProjectCard";
 import image1 from "../assets/project.svg";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 const variantImage = {
   hidden: {
     opacity: 0,
@@ -45,7 +46,11 @@ export default function Projects() {
           Projects
         </motion.h1>
 
-        <a href="https://storyset.com/business" target="_blank">
+        <Link
+          to="https://storyset.com/business"
+          aria-label="Image source link"
+          target="_blank"
+        >
           <motion.img
             src={image1}
             alt="business image "
@@ -56,7 +61,7 @@ export default function Projects() {
             animate="visible"
             exit="exit"
           />
-        </a>
+        </Link>
       </div>
 
       <div className=" row justify-center align-center mt-4 projects ">

@@ -107,6 +107,7 @@ export default function About() {
             whileHover="hover"
             to="https://www.linkedin.com/in/okan-demirbilek-55b314228/"
             target="_blank"
+            aria-label="Check  Okan Demirbilek's Linkedin"
           >
             <BsLinkedin size={30} />
           </MotionLink>
@@ -116,6 +117,7 @@ export default function About() {
             whileHover="hover"
             to="https://github.com/okademirbilek"
             target="_blank"
+            aria-label="Check  Okan Demirbilek's Github"
           >
             <BsGithub size={30} />
           </MotionLink>
@@ -126,6 +128,7 @@ export default function About() {
             className="resume"
             href={resume}
             download="Resume"
+            aria-label="Read more about Okan Demirbilek's Resume"
           >
             Cv
           </motion.a>
