@@ -4,7 +4,9 @@ import myImage from "../assets/removed.webp";
 
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 
-import resume from "../assets/okandemirbilekcv.pdf";
+import resume from "../assets/okandemirbilekcvlast.pdf";
+
+import { Link } from "react-router-dom";
 
 const variantTitle = {
   hidden: {
@@ -56,6 +58,8 @@ const variantLogo = {
   },
 };
 
+const MotionLink = motion(Link);
+
 export default function About() {
   return (
     <>
@@ -98,23 +102,23 @@ export default function About() {
           animate="visible"
           exit="exit"
         >
-          <motion.a
+          <MotionLink
             variants={variantLogo}
             whileHover="hover"
-            href="https://www.linkedin.com/in/okan-demirbilek-55b314228/"
+            to="https://www.linkedin.com/in/okan-demirbilek-55b314228/"
             target="_blank"
           >
             <BsLinkedin size={30} />
-          </motion.a>
+          </MotionLink>
 
-          <motion.a
+          <MotionLink
             variants={variantLogo}
             whileHover="hover"
-            href="https://github.com/okademirbilek"
+            to="https://github.com/okademirbilek"
             target="_blank"
           >
             <BsGithub size={30} />
-          </motion.a>
+          </MotionLink>
 
           <motion.a
             variants={variantLogo}
