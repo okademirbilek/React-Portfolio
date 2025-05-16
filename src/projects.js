@@ -115,32 +115,33 @@ const projectData = [
     website: "https://demirbilekgym.netlify.app/",
     provider: "netlify",
   },
-  // {
-  //   id: "4",
-  //   title: "Quiz App",
-  //   images: [
-  //     "https://github.com/okademirbilek/lostarkimages/blob/main/portfoimg/image9.JPG?raw=true",
-  //     "https://github.com/okademirbilek/lostarkimages/blob/main/portfoimg/image10.JPG?raw=true",
-  //   ],
-  //   layoutImg:
-  //     "https://github.com/okademirbilek/lostarkimages/blob/main/portfoimg/image11.JPG?raw=true",
-  //   logos: [
-  //     "SiVite",
-  //     "FaReact",
-  //     "SiReactrouter",
-  //     "SiJavascript",
-  //     "FaHtml5",
-  //     "SiCss3",
-  //   ],
-  //   library: [],
-  //   summary:
-  //     "It is a quiz application where you can choose any subject with multiple difficulty levels. After solving the test, you can see the answers and accuracy percentage.",
-  //   experience:
-  //     "During the development, I learned about react state management and hooks, as well as data attributes, condititonal rendering, and developing projects in Vercel.",
-  //   github: "https://github.com/okademirbilek/QuizGame",
-  //   website: "https://quiz-game-red.vercel.app/",
-  //   provider: "vercel",
-  // },
 ];
 
 export default projectData;
+
+// {
+//   id: "4",
+//   title: "Quiz App",
+//   images: [
+//     "https://github.com/okademirbilek/lostarkimages/blob/main/portfoimg/image9.JPG?raw=true",
+//     "https://github.com/okademirbilek/lostarkimages/blob/main/portfoimg/image10.JPG?raw=true",
+//   ],
+//   layoutImg:
+//     "https://github.com/okademirbilek/lostarkimages/blob/main/portfoimg/image11.JPG?raw=true",
+//   logos: [
+//     "SiVite",
+//     "FaReact",
+//     "SiReactrouter",
+//     "SiJavascript",
+//     "FaHtml5",
+//     "SiCss3",
+//   ],
+//   library: [],
+//   summary:
+//     "It is a quiz application where you can choose any subject with multiple difficulty levels. After solving the test, you can see the answers and accuracy percentage.",
+//   experience:
+//     "During the development, I learned about react state management and hooks, as well as data attributes, condititonal rendering, and developing projects in Vercel.",
+//   github: "https://github.com/okademirbilek/QuizGame",
+//   website: "https://quiz-game-red.vercel.app/",
+//   provider: "vercel",
+// },

@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://okandemirbilek.netlify.app/sitemap.xml

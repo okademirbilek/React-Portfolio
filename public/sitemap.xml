@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Statik Sayfalar -->
+  <url>
+    <loc>https://okandemirbilek.netlify.app/</loc>
+    <lastmod>2025-05-16</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://okandemirbilek.netlify.app/skills</loc>
+    <lastmod>2025-05-16</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://okandemirbilek.netlify.app/projects</loc>
+    <lastmod>2025-05-16</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://okandemirbilek.netlify.app/about</loc>
+    <lastmod>2025-05-16</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://okandemirbilek.netlify.app/contact</loc>
+    <lastmod>2025-05-16</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Dinamik /projects/:id Sayfaları -->
+  <url>
+    <loc>https://okandemirbilek.netlify.app/projects/1</loc>
+    <lastmod>2025-05-16</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://okandemirbilek.netlify.app/projects/2</loc>
+    <lastmod>2025-05-16</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://okandemirbilek.netlify.app/projects/3</loc>
+    <lastmod>2025-05-16</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://okandemirbilek.netlify.app/projects/4</loc>
+    <lastmod>2025-05-16</lastmod>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
