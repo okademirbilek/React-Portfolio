@@ -1,3 +1,59 @@
+// import React, { useState } from "react";
+// import { motion } from "framer-motion";
+// import { Link } from "react-router-dom";
+
+// const variantCon = {
+//   exit: {
+//     opacity: 0,
+//     transition: { ease: "easeInOut" },
+//   },
+// };
+
+// export default function ProjectCard({ src, index }) {
+//   const [imageLoading, setImageLoading] = useState(true);
+//   const [pulsing, setPulsing] = useState(true);
+//   const [isShown, setIsShown] = useState(false);
+
+//   const imageLoaded = () => {
+//     setImageLoading(false);
+//     setTimeout(() => setPulsing(false), 1000);
+//   };
+
+//   return (
+//     <div
+//       className={`relative card display-f justify-center col-12-xs col-5-xl col-12-sm ${
+//         pulsing ? "pulse" : ""
+//       } loadable`}
+//       style={{ width: "220px", background: "#ccc", borderRadius: "6px" }}
+//       onMouseEnter={() => setIsShown(true)}
+//       onMouseLeave={() => setIsShown(false)}
+//       onTouchStart={() => setIsShown(true)} // for mobile
+//     >
+//       <motion.img
+//         src={src}
+//         initial={{ height: "0.1rem", opacity: 0 }}
+//         animate={{
+//           height: imageLoading ? "0.1rem" : "200px",
+//           opacity: imageLoading ? 0 : 1,
+//         }}
+//         transition={{
+//           height: { delay: 0, duration: 1 },
+//           opacity: { delay: 0.5, duration: 1 },
+//         }}
+//         onLoad={imageLoaded}
+//         exit={{ opacity: 0, transition: { ease: "easeOut" } }}
+//         style={{ objectFit: "cover" }}
+//       />
+
+//       {isShown && (
+//         <Link to={`/projects/${index}`} className="overClass">
+//           <div className="project-back">Project Page</div>
+//         </Link>
+//       )}
+//     </div>
+//   );
+// }
+
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -21,12 +77,40 @@ export default function ProjectCard({ src, index }) {
 
   return (
     <div
-      className={`card col-12-xs col-5-xl col-12-sm  display-f justify-center ${
+      className={`relative card col-12-xs col-5-xl col-12-sm  display-f justify-center ${
         pulsing ? "pulse" : ""
       } loadable`}
       style={{ width: "220px", background: "#ccc", borderRadius: "6px" }}
+      onMouseEnter={() => setIsShown(true)}
+      onMouseLeave={() => setIsShown(false)}
+      onTouchStart={() => setIsShown(true)} // for mobile
     >
-      <motion.div
+      <motion.img
+        src={src}
+        initial={{ height: "0.1rem", opacity: 0 }}
+        animate={{
+          height: imageLoading ? "0.1rem" : "200px",
+          opacity: imageLoading ? 0 : 1,
+        }}
+        transition={
+          ({ height: { delay: 0, duration: 1 } },
+          { opacity: { delay: 0.5, duration: 1 } })
+        }
+        onLoad={imageLoaded}
+        exit={{ opacity: 0, transition: { ease: "easeOut" } }}
+      ></motion.img>
+
+      {isShown && (
+        <Link to={`/projects/${index}`} className="overClass">
+          Project Page
+        </Link>
+      )}
+    </div>
+  );
+}
+
+{
+  /* <motion.div
         onHoverStart={(e) => {}}
         onHoverEnd={(e) => {
           setIsShown(false);
@@ -45,26 +129,5 @@ export default function ProjectCard({ src, index }) {
         <Link to={`/projects/${index}`}>
           <h2 className="">Project Page </h2>
         </Link>
-      </motion.div>
-
-      <motion.img
-        onHoverStart={(e) => {
-          setIsShown(true);
-        }}
-        onHoverEnd={(e) => {}}
-        src={src}
-        initial={{ height: "0.1rem", opacity: 0 }}
-        animate={{
-          height: imageLoading ? "0.1rem" : "200px",
-          opacity: imageLoading ? 0 : 1,
-        }}
-        transition={
-          ({ height: { delay: 0, duration: 1 } },
-          { opacity: { delay: 0.5, duration: 1 } })
-        }
-        onLoad={imageLoaded}
-        exit={{ opacity: 0, transition: { ease: "easeOut" } }}
-      ></motion.img>
-    </div>
-  );
+      </motion.div> */
 }

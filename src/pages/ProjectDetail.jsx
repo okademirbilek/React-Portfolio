@@ -98,8 +98,8 @@ export default function ProjectDetail() {
           </Link>
           <Link
             className="site display-f justify-center gp-1  br-sm "
-            href={data.website}
-            to="_blank"
+            to={data.website}
+            target="_blank"
             aria-label="Check Project Live Page"
           >
             {data.provider === "netlify" ? (

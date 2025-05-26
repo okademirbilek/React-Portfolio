@@ -599,7 +599,8 @@ img {
 }
 
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {
@@ -1022,7 +1023,25 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
   background-color: rgba(210, 179, 100, 0.1);
 }
 
-.tab-bar, .navbar .container, .navbar-cardColor .container, .navbar-white .container, .navbar-backColor .container, .navbar-orange .container, .navbar-info .container, .navbar-error .container, .navbar-secondary .container, .navbar-primary .container, .navbar, .navbar-cardColor, .navbar-white, .navbar-backColor, .navbar-orange, .navbar-info, .navbar-error, .navbar-secondary, .navbar-primary {
+.tab-bar,
+.navbar .container,
+.navbar-cardColor .container,
+.navbar-white .container,
+.navbar-backColor .container,
+.navbar-orange .container,
+.navbar-info .container,
+.navbar-error .container,
+.navbar-secondary .container,
+.navbar-primary .container,
+.navbar,
+.navbar-cardColor,
+.navbar-white,
+.navbar-backColor,
+.navbar-orange,
+.navbar-info,
+.navbar-error,
+.navbar-secondary,
+.navbar-primary {
   width: 100%;
   display: flex;
   align-items: center;
@@ -1030,19 +1049,51 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
   box-sizing: border-box;
 }
 
-.navbar, .navbar-cardColor, .navbar-white, .navbar-backColor, .navbar-orange, .navbar-info, .navbar-error, .navbar-secondary, .navbar-primary {
+.navbar,
+.navbar-cardColor,
+.navbar-white,
+.navbar-backColor,
+.navbar-orange,
+.navbar-info,
+.navbar-error,
+.navbar-secondary,
+.navbar-primary {
   padding: 0.75rem 1.5rem;
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
   height: 10vh;
 }
-.navbar .site-title, .navbar-cardColor .site-title, .navbar-white .site-title, .navbar-backColor .site-title, .navbar-orange .site-title, .navbar-info .site-title, .navbar-error .site-title, .navbar-secondary .site-title, .navbar-primary .site-title {
+.navbar .site-title,
+.navbar-cardColor .site-title,
+.navbar-white .site-title,
+.navbar-backColor .site-title,
+.navbar-orange .site-title,
+.navbar-info .site-title,
+.navbar-error .site-title,
+.navbar-secondary .site-title,
+.navbar-primary .site-title {
   font-size: 2.25rem;
 }
-.navbar a, .navbar-cardColor a, .navbar-white a, .navbar-backColor a, .navbar-orange a, .navbar-info a, .navbar-error a, .navbar-secondary a, .navbar-primary a {
+.navbar a,
+.navbar-cardColor a,
+.navbar-white a,
+.navbar-backColor a,
+.navbar-orange a,
+.navbar-info a,
+.navbar-error a,
+.navbar-secondary a,
+.navbar-primary a {
   font-size: 1.2rem;
   z-index: 1;
 }
-.navbar a:hover, .navbar-cardColor a:hover, .navbar-white a:hover, .navbar-backColor a:hover, .navbar-orange a:hover, .navbar-info a:hover, .navbar-error a:hover, .navbar-secondary a:hover, .navbar-primary a:hover {
+.navbar a:hover,
+.navbar-cardColor a:hover,
+.navbar-white a:hover,
+.navbar-backColor a:hover,
+.navbar-orange a:hover,
+.navbar-info a:hover,
+.navbar-error a:hover,
+.navbar-secondary a:hover,
+.navbar-primary a:hover {
   color: #1ac888;
 }
 .navbar-primary {
@@ -1314,7 +1365,9 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
   background: #fff;
 }
 
-.contact .form button, .contact .form input, .contact .form textarea {
+.contact .form button,
+.contact .form input,
+.contact .form textarea {
   background: rgba(35, 60, 122, 0.1);
   -webkit-backdrop-filter: blur(1px);
   backdrop-filter: blur(1px);
@@ -2114,4 +2167,20 @@ svg#freepik_stories-business-plan.animated #freepik--character-1--inject-2 {
 
 .gp-10 {
   gap: 10rem;
+}
+
+.overClass {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: #1ac888;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  font-weight: bold;
 }
